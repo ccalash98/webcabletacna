@@ -855,14 +855,15 @@ ul.sign li a i {
      transition: .5s ease;
      opacity: 0;
      position: absolute;
-     top: 45%;
+     top: 46%;
      left: 50%;
      transform: translate(-50%, -50%);
      -ms-transform: translate(-50%, -50%);
      text-align: center;
-     background-color: #ebd93cc2;
+     background-color: #1c84e7ca;
      width: 90%;
      height: 92%;
+     border-radius: 10%;
 }
 
 .text2 {
