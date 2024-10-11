@@ -519,8 +519,8 @@ ul.sign li a i {
 /** banner section **/
 
 .banner_main {
-     padding: 60px 0 0px 0;
-     background: url(../images/banner.jpg);
+     padding: 400px 0 0px 0;
+     background: url(../images/banner.png);
      background-size: 100% 100%;
      background-repeat: no-repeat;
 }
@@ -668,7 +668,7 @@ ul.sign li a i {
 }
 
 .about_img figure img {
-     width: 100%;
+     width: 70%;
 }
 
 .about_box {
