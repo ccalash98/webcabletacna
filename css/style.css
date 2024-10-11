@@ -318,7 +318,6 @@ ul.lan li {
      top: 0;
      padding: 5px 0;
      opacity: 0;
-     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
      background: none transparent;
      border: 0 none;
 }
@@ -1128,7 +1127,6 @@ ul.social_icont li a {
      color: #f2db18;
      text-transform: uppercase;
      margin-left: 20px;
-     float: left;
 }
 
 .testimonial_Carousel .test_box p {
