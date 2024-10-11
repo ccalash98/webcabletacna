@@ -442,10 +442,14 @@ ul.conta_icon li a:hover {
 }
 
 .header_bo {
-     background-color: #032154;
-     width: 100%;
-     height: 70px;
-}
+          background-color: #032154;
+          width: 100%;
+          height: 70px;
+          position: fixed;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          z-index: 1000; 
+      }
 
 
 /*-- navigation--*/
