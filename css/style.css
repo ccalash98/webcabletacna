@@ -159,9 +159,29 @@ a,
 }
 
 img {
-     max-width: 100%;
+     display: block;
+     width: 100%;
      height: auto;
-}
+     object-fit: contain;
+     margin: 0 auto; /* Centra la imagen */
+ }
+ 
+ @media (max-width: 575px) {
+     img {
+         max-width: 55%;
+         height: auto;
+         margin-top: 0; /* Mantén este valor o ajusta si es necesario */
+         margin-left: auto; /* Asegura que esté centrado */
+         margin-right: auto; /* Asegura que esté centrado */
+     }
+ }
+ 
+ @media (min-width: 576px) and (max-width: 767px) {
+     img {
+         display: none; /* Oculta la imagen en este rango */
+     }
+ }
+ 
 
  :focus {
      outline: 0;
@@ -522,11 +542,21 @@ ul.sign li a i {
 /** banner section **/
 
 .banner_main {
-     padding: 400px 0 0px 0;
+     position: relative; 
+     top: 70px; 
+     left: 0;
+     width: 100%;
+     height: auto; 
+     padding-top: 35%; 
      background: url(../images/banner.png);
-     background-size: 100% 100%;
+     background-size: cover; 
+     background-position: center; 
      background-repeat: no-repeat;
-}
+     z-index: 999; 
+ }
+ 
+ 
+ 
 
 .text-bg {
      text-align: left;
