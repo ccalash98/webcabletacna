@@ -492,7 +492,7 @@ ul.conta_icon li a:hover {
 .navigation.navbar-dark .navbar-nav .nav-link:focus,
 .navigation.navbar-dark .navbar-nav .nav-link:hover {
      color: #ffffff;
-     background-color: #f2db18;
+     background-color: #a2ef02;
 }
 
 .navigation.navbar-dark .navbar-nav .active>.nav-link,
@@ -500,7 +500,7 @@ ul.conta_icon li a:hover {
 .navigation.navbar-dark .navbar-nav .nav-link.show,
 .navigation.navbar-dark .navbar-nav .show>.nav-link {
      color: #ffffff;
-     background-color: #f2db18;
+     background-color: #a2ef02;
 }
 
 .navbar-expand-md .navbar-nav {
@@ -855,12 +855,13 @@ ul.sign li a i {
      text-align: center;
      margin: 10px 0 20px;
      padding: 10px;
-     color: var(--e-global-color-primary); /* Color del texto superior */
+     color: #a2ef02;
      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
      border-radius: 10px;
      transition: transform 0.3s;
- }
+}
  
+  
  .portfolio .titlepage h2::after {
      content: attr(data-text);
      position: absolute;
@@ -868,8 +869,8 @@ ul.sign li a i {
      top: 0;
      width: 100%;
      height: 100%;
-     color: var(--e-global-color-secundary); /* Color del texto inferior */
-     clip-path: inset(0 50% 0 0); /* Corta la mitad derecha */
+     color: var(--e-global-color-secundary); 
+     clip-path: inset(0 50% 0 0); 
      transition: transform 0.3s;
  }
  
