@@ -637,7 +637,7 @@ ul.sign li a i {
 
 .yellow {
      color: #a2ef02;
-     font-size: 17px;
+     font-size: 28px;
      font-weight: bold;
      text-transform: uppercase;
      line-height: 28px;
@@ -1049,15 +1049,14 @@ ul.sign li a i {
 
 /** team section **/
 
-.team {
+.team { 
      background: #fff;
-     padding-top: 80px;
 }
 
 .team .titlepage h2 {
      color: #1a75cf;
      text-align: center; 
-     font-size: 2.5em; 
+     font-size: 38px; 
      font-weight: bold; 
      text-transform: uppercase; 
      margin: 20px 0; 
@@ -1070,7 +1069,7 @@ ul.sign li a i {
 .team .team_Carousel .carousel-caption {
      position: inherit;
      padding: 0;
-}
+}    
 
 .team_box {
      text-align: center;
@@ -1082,9 +1081,8 @@ ul.sign li a i {
           border-width: 4px;   
           border-color: #a2ef02; 
           border-radius: 30px;
-          margin: 20px 0; 
       }
-      
+        
 
 ul.social_icont {
      margin-top: 41%;
@@ -1550,4 +1548,41 @@ ul.img_icon li {
    }
 
 
-
+   .team {
+     max-width: 1200px; /* Ancho máximo del contenedor */
+     margin: auto; /* Centrar el contenedor */
+     padding: 20px; /* Espacio alrededor */
+   }
+   
+   .team_img {
+     text-align: center; /* Centra las imágenes */
+   }
+   
+   .team_img img {
+     width: 100%; /* Las imágenes ocupan el 100% del contenedor */
+     height: auto; /* Mantener la relación de aspecto */
+   }
+   
+   .carousel-caption {
+     text-align: center; /* Centrar el texto del carrusel */
+   }
+   
+   /* Configuración de columnas según el tamaño de la pantalla */
+   @media (min-width: 992px) { /* Pantallas grandes (md) */
+     .col-md-4 {
+       flex: 0 0 33.333%; /* 3 columnas */
+     }
+   }
+   
+   @media (max-width: 991px) and (min-width: 768px) { /* Pantallas medianas (sm) */
+     .col-md-4 {
+       flex: 0 0 50%; /* 2 columnas */
+     }
+   }
+   
+   @media (max-width: 767px) { /* Pantallas pequeñas (xs) */
+     .col-md-4 {
+       flex: 0 0 100%; /* 1 columna */
+     }
+   }
+   
