@@ -527,7 +527,7 @@
                   </ol>
                   <div class="carousel-inner">
                      <div class="carousel-item active">
-                        <div class="container">
+                        <div class="container">  
                            <div class="carousel-caption ">
                               <div class="row">
                                  <div class="col-md-4 col-sm-6">
@@ -545,7 +545,7 @@
                                  </div>
                                  <div class="col-md-4 col-sm-6">
                                     <div id="ho_bg" class="team_img">
-                                       <img src="images/dr2.png" alt="#" />
+                                       <img src="images/dr5.png   " alt="#" />
                                        <div class="ho_socal">
                                           <ul class="social_icont">
                                              <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -613,11 +613,11 @@
                                              <li> <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                              <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
                                           </ul>
-                                       </div>
+                                       </div>  
                                     </div>
                                  </div>
                               </div>
-                           </div>
+                           </div>  
                         </div>
                      </div>
                      <div class="carousel-item">
@@ -788,8 +788,62 @@
       </div>
    </div>
    </div>
-   -->
+   --> 
    <!-- end contact  section -->
+    <div class="blu">
+   <div class="container pg mt-5">
+      <h2 class="frec">PREGUNTAS FRECUENTES </h2>
+      <div class="accordion">
+          <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <h5 class="accordion-button">¿Qué es Cable Tacna?</h5>
+              </div>
+              <div class="accordion-content">
+                  <p>Cable Tacna es un proveedor de servicios de Internet y televisión por cable que utiliza tecnología de fibra óptica.</p>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <h5 class="accordion-button">¿Qué dispositivos se pueden utilizar con Cable Tacna?</h5>
+              </div>
+              <div class="accordion-content">
+                  <p>Se pueden utilizar diversos dispositivos, como televisores inteligentes, computadoras, y dispositivos móviles compatibles.</p>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <h5 class="accordion-button">¿Qué medios de pago puedo usar con Cable Tacna?</h5>
+              </div>
+              <div class="accordion-content">
+                  <p>Aceptamos tarjetas de crédito, débito y transferencias bancarias.</p>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <h5 class="accordion-button">¿Cómo me reconecto a Cable Tacna?</h5>
+              </div>
+              <div class="accordion-content">
+                  <p>Para reconectar tu servicio, puedes contactar a nuestro soporte técnico o hacerlo a través de nuestra página web.</p>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <h5 class="accordion-button">¿Cuáles son los beneficios de Cable Tacna?</h5>
+              </div>
+              <div class="accordion-content">
+                  <p>Ofrecemos alta velocidad de internet, variedad de canales de televisión y atención al cliente 24/7.</p>
+              </div>
+          </div>
+          <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <h5 class="accordion-button">¿A qué puedo acceder según mi plan con Cable Tacna?</h5>
+              </div>
+              <div class="accordion-content">
+                  <p>Según tu plan, podrás acceder a diferentes velocidades de internet y paquetes de canales de televisión.</p>
+              </div>
+          </div>
+      </div>
+  </div>
    <!--  footer -->
    <footer>
       <div class="footer">
@@ -866,6 +920,7 @@
             </div>
          </div>
       </div>
+   </div>
    </footer>
    <!-- end footer -->
    <!-- Javascript files-->
@@ -879,6 +934,20 @@
    <script src="js/custom.js"></script>
    <!-- aleatorio -->
    <script src="js/whatsapp.var.js"></script>
+   <script>
+
+   function toggleAccordion(element) {
+          const content = element.nextElementSibling;
+          if (content.style.display === "block") {
+              content.style.display = "none";
+          } else {
+              // Cerrar otros elementos
+              const allContents = document.querySelectorAll('.accordion-content');
+              allContents.forEach(item => item.style.display = "none");
+              content.style.display = "block";
+          }
+      }
+  </script>
 </body>
 
 </html>
