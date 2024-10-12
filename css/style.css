@@ -927,14 +927,14 @@ ul.sign li a i {
 
 .text2 {
      background-color: transparent;
-     color: white;
+     color: #a2ef02;
      font-size: 17px;
-     padding: 7px 0px;
-      width: 144px;
+     padding: 7px 0px;  
+     width: 144px;
      margin-top: 50% !important;
      display: block;
      margin: 0 auto;
-     border: #fff solid 2px;
+     border: #a2ef02 solid 2px;
 }
 
 .portfolio_Carousel .carousel-indicators {
