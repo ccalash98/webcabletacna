@@ -636,13 +636,13 @@ ul.sign li a i {
 }
 
 .yellow {
-     color: #f2db18;
+     color: #a2ef02;
      font-size: 17px;
      font-weight: bold;
      text-transform: uppercase;
      line-height: 28px;
 }
-
+   
 .titlepage p {
      font-size: 20px;
      color: #090a0b;
@@ -856,7 +856,7 @@ ul.sign li a i {
      margin: 10px 0 20px;
      padding: 10px;
      color: #a2ef02;
-     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
      border-radius: 10px;
      transition: transform 0.3s;
 }
@@ -969,7 +969,7 @@ ul.sign li a i {
 #myCarousel .carousel-control-next:hover,
 #myCarousel .carousel-control-prev:focus,
 #myCarousel .carousel-control-next:focus {
-     background: #f2db18;
+     background: #a2ef02; 
      color: #fff;
 }
 
@@ -1055,8 +1055,17 @@ ul.sign li a i {
 }
 
 .team .titlepage h2 {
-     color: #010000;
-}
+     color: #1a75cf;
+     text-align: center; 
+     font-size: 2.5em; 
+     font-weight: bold; 
+     text-transform: uppercase; 
+     margin: 20px 0; 
+     padding: 10px; 
+     border-radius: 8px; 
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
 
 .team .team_Carousel .carousel-caption {
      position: inherit;
@@ -1068,10 +1077,14 @@ ul.sign li a i {
 }
 
 .team_img img {
-     margin-bottom: 30px;
-     border-radius: 220px;
-     border: #ddd solid 15px;
-}
+    
+          border-style: solid;     
+          border-width: 2px;  
+          border-color: #a2ef02; 
+          border-radius: 30px;
+          margin: 20px 0;
+      }
+      
 
 ul.social_icont {
      margin-top: 41%;
@@ -1098,10 +1111,10 @@ ul.social_icont li a {
      line-height: 40px;
      border-radius: 100%;
      font-size: 22px;
-}
+}    
 
-#ho_bg:hover.team_img img {
-     border: #e5d660 solid 15px;
+#ho_bg:hover.team_img img {   
+     border: #1a75cf solid 3px;
      background-color: #ddd;
 }
 
@@ -1110,20 +1123,22 @@ ul.social_icont li a {
 }
 
 .ho_socal {
-     position: absolute;
-     z-index: 9999;
-     top: 13px;
-     right: 0;
-     bottom: 0;
-     left: 0;
-     transition: .5s ease;
-     background-color: #082a63de;
-     border-radius: 381px;
-     width: 242px;
-     margin: 0 auto;
-     height: 247px;
-     opacity: 0;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: .2s ease;
+    border-radius: 30px;   
+    margin: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
 }
+ 
 
 .team_Carousel .carousel-indicators {
      bottom: -30px;
