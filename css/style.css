@@ -1809,7 +1809,7 @@ ul.img_icon li {
   /* Estilos para pantallas medianas (tabletas) */
   @media (min-width: 576px) and (max-width: 768px) { 
      .logo-img {
-        width: 100%; 
+        width: 100%;   
         display: none;  
      }  
   }
@@ -1820,5 +1820,11 @@ ul.img_icon li {
         width: 100%; 
      }
   }
+   
   
-  
+  .nav-item {
+     display: flex;
+     justify-content: center; 
+     align-items: center; 
+     height: 100%; 
+} 
