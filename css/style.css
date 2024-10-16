@@ -158,30 +158,38 @@ a,
      transition: all .3s ease-in-out;
 }
 
-img {
+.portfolio_img img { 
      display: block;
-     width: 100%;
+     width: 75%;
      height: auto;
      object-fit: contain;
-     margin: 0 auto; /* Centra la imagen */
+     margin: 0 auto; 
  }
- 
+   
  @media (max-width: 575px) {
-     img {
-         max-width: 55%;
+     .portfolio_img img {
+         max-width: 55%;      
          height: auto;
-         margin-top: 0; /* Mantén este valor o ajusta si es necesario */
-         margin-left: auto; /* Asegura que esté centrado */
-         margin-right: auto; /* Asegura que esté centrado */
+         margin-top: 0; 
+         margin-left: auto; 
+         margin-right: auto;
      }
  }
  
- @media (min-width: 576px) and (max-width: 767px) {
-     img {
-         display: none; /* Oculta la imagen en este rango */
-     }
+ .loader_bg {
+     position: fixed; 
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(255, 255, 255, 0.8); 
+     display: flex; 
+     justify-content: center; 
+     align-items: center; 
+     z-index: 9999; 
  }
  
+
 
  :focus {
      outline: 0;
@@ -629,18 +637,19 @@ ul.sign li a i {
      font-size: 36px;
      color: #154492;
      line-height: 45px;
-     font-weight: bold;
+     font-weight: bold;  
      padding: 0;
      display: block;
-     text-transform: uppercase;
+     text-transform: uppercase; 
 }
 
 .yellow {
      color: #a2ef02;
-     font-size: 28px;
+     font-size: 38px;
      font-weight: bold;
      text-transform: uppercase;
      line-height: 28px;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
 }
    
 .titlepage p {
@@ -847,10 +856,10 @@ ul.sign li a i {
      padding-bottom: 40px;
 }
 
-.portfolio .titlepage h2 {
+.portfolio .titlepage h2 {   
      position: relative;
      font-family: Quicksand, sans-serif;
-     font-size: 40px;
+     font-size: 38px;
      font-weight: 700;
      text-align: center;
      margin: 10px 0 20px;
@@ -859,6 +868,7 @@ ul.sign li a i {
      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
      border-radius: 10px;
      transition: transform 0.3s;
+     margin-top: 50px;
 }
  
   
@@ -878,7 +888,7 @@ ul.sign li a i {
 
 .portfolio .titlepage span {
      color: #040300;
-     font-size: 17px;
+     font-size: 17px; 
      line-height: 28px;
      font-weight: 600;
 }
@@ -903,7 +913,7 @@ ul.sign li a i {
 .portfolio_img {
      margin-bottom: 30px;
 }
-
+  
 .middle:hover {
      opacity: 1;
      z-index: 9999;
@@ -916,18 +926,12 @@ ul.sign li a i {
      position: absolute;
      top: 46%;
      left: 50%;
-     transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);   
      text-align: center;
      width: 90%;
      height: 92%;
-     border-radius: 10%;
+     border-radius: 10%;  
  }
-   
- .middle:hover {
-     opacity: 1; /* Cambia la opacidad al pasar el mouse */
-     background-color: rgba(67, 80, 194, 0.8); /* Cambia el color de fondo si lo deseas */
- }
- 
 
 .text2 {
      background-color: transparent;
@@ -939,8 +943,8 @@ ul.sign li a i {
      display: block;
      margin: 0 auto;
      border: #a2ef02 solid 3px;
-     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Adds shadow to text */
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds shadow around the box */
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
  }
  
 
@@ -1080,13 +1084,13 @@ ul.sign li a i {
 
 .team_box {
      text-align: center;
-}
+} 
 
 .team_img img {
-    
-          border-style: solid;     
-          border-width: 4px;   
-          border-color: #a2ef02; 
+       
+          border-style: solid;       
+          border-width: 1,5px;    
+          border-color: #1a75cf; 
           border-radius: 30px;
       }
         
@@ -1095,7 +1099,7 @@ ul.social_icont {
      margin-top: 41%;
      display: flex;
      align-content: center;
-     align-items: center;
+     align-items: center; 
      justify-content: center;
 }
 
@@ -1108,7 +1112,7 @@ ul.social_icont li {
 
 ul.social_icont li a {
      color: #060400;
-     width: 40px;
+     width: 40px; 
      height: 40px;
      background: #fff;
      float: left;
@@ -1118,11 +1122,6 @@ ul.social_icont li a {
      font-size: 22px;  
 }    
 
-#ho_bg:hover.team_img img {   
-     border: #1a75cf solid 4px;
-     background-color: #ddd;
-          
-}
 
 .ho_socal:hover {
      opacity: 1;
@@ -1563,11 +1562,12 @@ ul.img_icon li {
    
    .team_img {
      text-align: center; 
-   }      
-   
+   }         
+     
    .team_img img {
      width: 100%; 
      height: auto; 
+     margin-bottom: 24px;
    }
    
    .carousel-caption {
@@ -1626,7 +1626,7 @@ ul.img_icon li {
  .social-icon a {
      color: #ffffff; 
      font-size: 20px; 
-     transition: color 0.3s; 
+     transition: color 0.3s;   
  }
  
  .social-icon a:hover {
@@ -1646,4 +1646,167 @@ ul.img_icon li {
      color: #ffffff;
      
  }
+ .portfolio_img {
+     position: relative;
+     overflow: hidden;
+ }
+   
+
+ .blue{
+
+ color: #1a75cf;
+ text-align: center;    
+ font-size: 38px; 
+ font-weight: bold; 
+ text-transform: uppercase; 
+ margin: 20px 0; 
+ padding: 10px; 
+ border-radius: 8px; 
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+}    
+
+.verde{  
+
+     color: #a2ef02; 
+     font-size: 38px;
+     font-weight: bold;
+     text-transform: uppercase;
+     line-height: 28px;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+
+}    
+
+
+.w-100 {
+     width: 100% !important;
+     margin-top: 50px;
+ }
+
  
+ .carousel-item .publicidad .img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover; 
+ }
+
+ .channel-card {
+     position: relative; 
+     overflow: hidden;
+     border: 1px solid #1a75cf; 
+     border-radius: 8px; 
+     transition: transform 0.3s, box-shadow 0.3s; 
+     margin-bottom: 20px; 
+ }
+ 
+ .channel-card:hover {
+     transform: translateY(-5px); 
+     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); 
+ }
+   
+ .channel-card img {
+     padding: 40px 0; 
+     border-bottom: 1px solid #ddd; 
+     transition: opacity 0.3s; 
+     display: block;
+ }
+ 
+ .channel-card:hover img {
+     opacity: 0.9; 
+ }
+ 
+ .channel-name {
+     text-align: center;  
+     padding: 10px; 
+     font-weight: bold;
+     background-color: #f8f9fa; 
+     color: #333; 
+     transition: color 0.3s; 
+ }
+ 
+ .channel-card:hover .channel-name {
+     color: #007bff; 
+ }
+ 
+   
+ .text-center.tv{
+     color: #007bff; 
+}    
+
+.TV {   
+     text-align: center;
+     margin-bottom: 60px;
+     margin-top: 60 px;
+}
+
+.btn-Descubre {
+     padding: 12px 24px;
+     font-size: 18px; 
+     border: none; 
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s, transform 0.3s;   
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     background-color: #a2ef02;
+     color: white;
+ }
+
+ .btn-Descubre:hover { 
+     background-color: #007bff;
+     transform: translateY(-2px); 
+ }
+ 
+ .btn-Descubre:active {
+     transform: translateY(0);
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+ }
+ .accordion-content ul {
+     margin: 10px 0;
+     padding-left: 0; 
+     list-style-type: none; 
+ }
+ 
+ .accordion-content li {
+     margin: 5px 0; 
+     text-align: center; 
+     font-size: 16px; 
+     line-height: 1.5; 
+ }
+     
+ /* Estilos para el logo */
+/* Estilos para el logo */
+.logo-img {    
+     max-width: 100%;  
+     height: auto;    
+  }
+  
+  /* Estilos adicionales para el header */
+  .header {
+     background-color: #fff;
+  }
+  
+  .navbar-nav .nav-link {
+     padding: 0.5rem 1rem; 
+  }
+  
+  /* Estilos para pantallas pequeñas (móviles) */      
+  @media (max-width: 575px) {
+     .logo-img {
+        width: 50%; 
+     }
+  }
+  
+  /* Estilos para pantallas medianas (tabletas) */
+  @media (min-width: 576px) and (max-width: 768px) { 
+     .logo-img {
+        width: 100%; 
+        display: none;  
+     }  
+  }
+  
+  /* Estilos para pantallas grandes (escritorios) */
+  @media (min-width: 769px) { 
+     .logo-img {
+        width: 100%; 
+     }
+  }
+  
