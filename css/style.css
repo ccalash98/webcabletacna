@@ -271,28 +271,34 @@ button {
      display: flex;
      justify-content: center;
      align-items: center;
-}
-
-.loader img {
+}  
+  
+.loader img {  
      width: 280px;
 }
 
 ul.btn {
      float: right;
+    
 }
 
-ul.btn li {
-     display: inline-block;
+ul.btn li {    
+     display: inline-block; 
      padding: 0 25px;
+    
 }
+
 
 ul.btn li a {
-     color: #fff;
+     color: #fff;   
      font-size: 16px;
+     
 }
+ 
 
 ul.btn li:last-child {
      padding-right: 0;
+
 }
 
 
@@ -1517,17 +1523,18 @@ ul.img_icon li {
         transition: background-color 0.3s;
     }
     .accordion-header:hover {
-        background-color: #e7e7e7;
+        background-color: #e7e7e7; 
     }
     .accordion-button {
         margin: 0;
         font-weight: bold;
     }
     .accordion-content {
-        display: none;
-        padding: 15px;
+        display: none;   
+        padding: 15px;  
         background-color: #fff;
-    }
+        
+    }   
 
     h2.frec {
      font-size: 32px;
@@ -1617,7 +1624,7 @@ ul.img_icon li {
      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);  
  }
  
- .footer-social-icons {
+ .footer-social-icons { 
      display: flex; 
      gap: 15px;
      margin-bottom: 20px; 
@@ -1770,6 +1777,7 @@ ul.img_icon li {
      text-align: center; 
      font-size: 16px; 
      line-height: 1.5; 
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  }
      
  /* Estilos para el logo */
