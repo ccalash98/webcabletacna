@@ -911,31 +911,38 @@ ul.sign li a i {
 
 .middle {
      z-index: 9999;
-     transition: .5s ease;
+     transition: .2s ease;
      opacity: 0;
      position: absolute;
      top: 46%;
      left: 50%;
      transform: translate(-50%, -50%);
-     -ms-transform: translate(-50%, -50%);
      text-align: center;
-     background-color: #1c84e7ca;
      width: 90%;
      height: 92%;
      border-radius: 10%;
-}
+ }
+   
+ .middle:hover {
+     opacity: 1; /* Cambia la opacidad al pasar el mouse */
+     background-color: rgba(67, 80, 194, 0.8); /* Cambia el color de fondo si lo deseas */
+ }
+ 
 
 .text2 {
      background-color: transparent;
      color: #a2ef02;
-     font-size: 17px;
-     padding: 7px 0px;  
+     font-size: 18px;
+     padding: 7px 0;
      width: 144px;
      margin-top: 50% !important;
      display: block;
      margin: 0 auto;
-     border: #a2ef02 solid 2px;
-}
+     border: #a2ef02 solid 3px;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Adds shadow to text */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds shadow around the box */
+ }
+ 
 
 .portfolio_Carousel .carousel-indicators {
      display: none;
@@ -1549,40 +1556,94 @@ ul.img_icon li {
 
 
    .team {
-     max-width: 1200px; /* Ancho máximo del contenedor */
-     margin: auto; /* Centrar el contenedor */
-     padding: 20px; /* Espacio alrededor */
+     max-width: 1200px; 
+     margin: auto; 
+     padding: 20px; 
    }
    
    .team_img {
-     text-align: center; /* Centra las imágenes */
-   }
+     text-align: center; 
+   }      
    
    .team_img img {
-     width: 100%; /* Las imágenes ocupan el 100% del contenedor */
-     height: auto; /* Mantener la relación de aspecto */
+     width: 100%; 
+     height: auto; 
    }
    
    .carousel-caption {
-     text-align: center; /* Centrar el texto del carrusel */
+     text-align: center; 
    }
    
    /* Configuración de columnas según el tamaño de la pantalla */
-   @media (min-width: 992px) { /* Pantallas grandes (md) */
+   @media (min-width: 992px) { 
      .col-md-4 {
-       flex: 0 0 33.333%; /* 3 columnas */
+       flex: 0 0 33.333%; 
      }
    }
    
-   @media (max-width: 991px) and (min-width: 768px) { /* Pantallas medianas (sm) */
+   @media (max-width: 991px) and (min-width: 768px) { 
      .col-md-4 {
        flex: 0 0 50%; /* 2 columnas */
      }
    }
    
-   @media (max-width: 767px) { /* Pantallas pequeñas (xs) */
+   @media (max-width: 767px) { 
      .col-md-4 {
-       flex: 0 0 100%; /* 1 columna */
+       flex: 0 0 100%; 
      }
    }
    
+
+   .footer {
+     padding: 20px; 
+     text-align: center; 
+ }
+ 
+ .footer-container {
+     max-width: 1200px; 
+     margin: 0 auto; 
+ }
+ 
+ .footer-column {
+     display: flex;
+     flex-direction: column; 
+     align-items: center; 
+ }
+ 
+ .footer-heading {
+     font-size: 24px; 
+     color: #ffffff;
+     margin-bottom: 20px;
+     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);  
+ }
+ 
+ .footer-social-icons {
+     display: flex; 
+     gap: 15px;
+     margin-bottom: 20px; 
+ }
+ 
+ .social-icon a {
+     color: #ffffff; 
+     font-size: 20px; 
+     transition: color 0.3s; 
+ }
+ 
+ .social-icon a:hover {
+     color: #007bff; 
+ }
+ 
+ .footer-logo img {
+     width: 100%; 
+     max-width: 300px;        
+     height: auto;  
+     margin-bottom: 20px; 
+ }
+ 
+ .footer-rights {
+     font-size: 16px;
+     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);  
+     color: #ffffff;
+     
+ }
+ 
