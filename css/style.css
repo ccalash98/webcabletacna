@@ -427,6 +427,12 @@ ul.social_icon1 li:last-child {
      padding: 20px 0;
 }
 
+.logo {
+     text-align: center;
+     display: block;
+     width: 50%;
+     
+}
 
 .d_none1 {
      text-align: right;
@@ -1683,6 +1689,13 @@ ul.img_icon li {
      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
 
 }    
+
+
+.w-100 {
+     width: 100% !important;
+     margin-top: 50px;
+ }
+
  
  .carousel-item .publicidad .img {
      width: 100%;
@@ -1780,6 +1793,11 @@ ul.img_icon li {
      height: auto;    
   }
   
+  /* Estilos adicionales para el header */
+  .header {
+     background-color: #fff;
+  }
+  
   .navbar-nav .nav-link {
      padding: 0.5rem 1rem; 
   }
@@ -1795,7 +1813,7 @@ ul.img_icon li {
   @media (min-width: 576px) and (max-width: 768px) { 
      .logo-img {
         width: 100%;   
-         
+        display: none;  
      }  
   }
   
@@ -1805,149 +1823,9 @@ ul.img_icon li {
         width: 100%; 
      }
   }
-   
-  
   .nav-item {
      display: flex;
      justify-content: center; 
      align-items: center; 
      height: 100%; 
 } 
-
-/* Oculta la segunda columna en pantallas pequeñas */
-@media (max-width: 575px) {
-     .carousel-item .col-md-6 {
-         display: none; /* Oculta las columnas en pantallas pequeñas */
-     }
- 
-     .carousel-item.active .col-md-6:first-child {
-         display: block; /* Muestra solo la primera columna */
-     }
- 
-     .carousel-item.active .col-md-6:last-child {
-         display: none; /* Asegúrate de ocultar la segunda columna */
-     }   
- 
-     .carousel-item.active {
-         flex-direction: column; /* Cambia la dirección a columna */
-         text-align: center; /* Centra el texto */
-     }
-
-     .portfolio_img {
-         width: 100%; /* Asegura que las imágenes ocupen el ancho completo */
-     }
- 
-     .portfolio_img img {
-         max-width: 100%; /* Hace que la imagen sea responsiva */
-         height: auto; /* Mantiene la proporción de la imagen */
-     }
- }
- 
-/* Ajustes para pantallas pequeñas */
-
-@media (max-width: 767px) { 
-     .channel-card {
-         display: none; /* Oculta todas las tarjetas de canal */
-     }
- 
-     .channel-card:first-child {
-         display: block; /* Muestra solo la primera tarjeta */
-     }
-  
-     #more-channels {
-         display: none; /* Asegúrate de que los canales ocultos no se muestren */
-     }
-   
-     #large-image {
-         display: none; /* Oculta la imagen grande en pantallas pequeñas */
-     }
- }      
- 
- .team_img {
-     position: relative;
-     overflow: hidden;
-     transition: transform 0.2s ease;
-     z-index: 1; /* Asegura que el contenedor esté en el primer plano */
- }
- 
- .team_img img {
-     display: block;
-     width: 100%;
-     height: auto;
-     transition: transform 0.2s ease; /* Suaviza el movimiento de la imagen */
- }
- 
- .team_img:hover img {
-     transform: translateY(-10px); /* Eleva la imagen 10px hacia arriba al pasar el mouse */
-     z-index: 2; /* Eleva la imagen al pasar el mouse */
- }
- 
- .ho_socal {
-     position: absolute;
-     top: 50%; /* Centra verticalmente */
-     left: 50%; /* Centra horizontalmente */
-     transform: translate(-50%, -50%); /* Ajusta el desplazamiento */
-     opacity: 0; /* Inicialmente oculto */
-     transition: opacity 0.3s ease;
-     z-index: 2; /* Asegúrate de que esté en el frente */
- }
- 
- .team_img:hover .ho_socal {
-     opacity: 1; /* Muestra los iconos en hover */
- }
- 
- .social_icont {
-     list-style: none; /* Elimina los puntos de la lista */
-     padding: 0; /* Elimina el padding */
-     margin: 0; /* Elimina el margin */
-     display: flex; /* Utiliza flexbox para alinear los iconos */
-     gap: 10px; /* Espacio entre los iconos */
- }
-    
- .social_icont li {
-     display: inline; /* Asegura que los íconos estén en línea */
- }
- 
- .social_icont a {
-     color: white; /* Cambia el color según tu diseño */
-     font-size: 24px; /* Ajusta el tamaño de los íconos */
- }
- 
-
-   .header {
-       background-color:  #042050; /* Cambia esto según tus necesidades */
-   }
-
-     .logo-img {
-          max-width: 220px; /* Tamaño base del logo */
-          height: auto; /* Mantiene la proporción del logo */
-      }
-       
-      .nav-link {
-          padding: 10px 15px;  
-      }
-      
-      /* Media Queries para mayor adaptabilidad */
-      @media (max-width: 576px) {
-          .logo-img {
-              max-width: 190px; /* Tamaño del logo en pantallas pequeñas */
-          }
-      }
-      
-      @media (min-width: 577px) and (max-width: 768px) {
-          .logo-img {
-              max-width: 100px; /* Tamaño del logo en pantallas medianas */
-          }
-      }  
-       
-      @media (min-width: 769px) {
-          .logo-img {
-              max-width: 120px; /* Tamaño del logo en pantallas grandes */
-          }
-      }
-      
-      .w-100 {
-          margin-top: 65px;
-
-      }
-      
