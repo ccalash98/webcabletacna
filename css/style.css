@@ -1955,4 +1955,43 @@ ul.img_icon li {
           margin-top: 20px;
       }
 
-           
+      .carousel-inner .ps{
+
+          border-radius: 30px;
+     }
+     .portfolio_imgg img { 
+          display: block;
+          width: 75%;
+          height: auto;
+          object-fit: contain;
+          margin: 30px;
+          border-radius: 20px; /* Agregado border-radius */
+      }
+      
+      @media (max-width: 575px) {
+          .portfolio_imgg img {
+              max-width: 55%;      
+              height: auto;
+              margin-top: 0;   
+              margin-left: auto;   
+              margin-right: auto;
+              border-radius: 20px; /* Agregado border-radius en el media query */
+          }
+      } 
+      
+      .portfolio_imgg {
+          margin-bottom: 30px;
+          position: relative; 
+          overflow: hidden;
+          width: 100%; /* Asegura que las imágenes ocupen el ancho completo */
+      }
+      
+      .portfolio_imgg:hover {
+          transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+      }
+      
+      .portfolio_imgg img {
+          max-width: 100%; /* Hace que la imagen sea responsiva */
+          height: auto; /* Mantiene la proporción de la imagen */
+      }
+      
