@@ -328,10 +328,7 @@ header {
      padding: 9px 0;
 }
 
-.w-100 {
 
-     margin-top: 65px;
-}
 
 
 ul.lan li i {
@@ -1812,8 +1809,6 @@ ul.img_icon li {
         width: 100%; 
      }
   }
-   
-  
   .nav-item {
      display: flex;
      justify-content: center; 
