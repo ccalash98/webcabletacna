@@ -5,7 +5,7 @@
 
 /*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,  ');
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,400,600,700,900&display=swap');
 
@@ -162,7 +162,8 @@ a,
      width: 75%;
      height: auto;
      object-fit: contain;
-     margin: 0 auto; 
+     margin: 30px;
+
  }
    
  @media (max-width: 575px) {
@@ -867,8 +868,7 @@ ul.sign li a i {
 }
 
 .portfolio .titlepage {
-     text-align: left;
-     padding-bottom: 40px;
+     text-align: left; 
 }
 
 .portfolio .titlepage h2 {   
@@ -1643,9 +1643,9 @@ ul.img_icon li {
      font-size: 20px; 
      transition: color 0.3s;   
  }
- 
+     
  .social-icon a:hover {
-     color: #007bff; 
+     color: rgb(162, 239, 2);
  }
  
  .footer-logo img {
@@ -1665,7 +1665,7 @@ ul.img_icon li {
      position: relative;
      overflow: hidden;
  }
-   
+     
 
  .blue{
 
@@ -1703,12 +1703,11 @@ ul.img_icon li {
      border: 1px solid #1a75cf; 
      border-radius: 8px; 
      transition: transform 0.3s, box-shadow 0.3s; 
-     margin-bottom: 20px; 
+     margin-bottom: 20px;  
  }
  
  .channel-card:hover {
      transform: translateY(-5px); 
-     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); 
  }
    
  .channel-card img {
@@ -1942,11 +1941,18 @@ ul.img_icon li {
       @media (min-width: 577px) and (max-width: 768px) {
           .logo-img {
               max-width: 100px; /* Tamaño del logo en pantallas medianas */
-          }
+          }  
       }  
        
       @media (min-width: 769px) {
           .logo-img {
               max-width: 120px; /* Tamaño del logo en pantallas grandes */
-          }
+          } 
+      }  
+      
+      .portfolio_img:hover img {
+          transform: translateY(-5px); /* Levanta la imagen al hacer hover */
+          margin-top: 20px;
       }
+
+           
