@@ -312,27 +312,14 @@ ul.btn li:last-child {
 
 /*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
 
-header {
-     position: fixed; /* Mantiene el header fijo en la parte superior */
-     top: 0; /* Se asegura de que esté en la parte superior */
-     left: 0; /* Alineado a la izquierda */
-     width: 100%; /* Ancho completo */
-     z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
-     background-color: #343a40; /* Color de fondo (puedes cambiarlo) */
-     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
- }
- 
+.header {
+     width: 100%;
+}
 
 .header_to {
-     background-color: #032154; 
+     background-color: #032154;
      padding: 9px 0;
 }
-
-.w-100 {
-
-     margin-top: 65px;
-}
-
 
 ul.lan li i {
      padding-right: 5px;
@@ -1812,8 +1799,6 @@ ul.img_icon li {
         width: 100%; 
      }
   }
-   
-  
   .nav-item {
      display: flex;
      justify-content: center; 
