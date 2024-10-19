@@ -2033,9 +2033,9 @@ ul.img_icon li {
       .payment-image {
           max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */ 
           height: auto; /* Mantiene la proporción de la imagen */
-          margin-top: 10px; /* Espacio superior para la imagen */  
-      }
-      
+          margin-top: 10px; /* Espacio superior para la imagen */
+      } 
+         
       
       /* Estilos para pantallas pequeñas */
       @media (max-width: 600px) {
