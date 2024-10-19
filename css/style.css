@@ -156,25 +156,45 @@ a,
      -o-transition: all .3s ease-in-out;
      transition: all .3s ease-in-out;
 }
-
-.portfolio_img img { 
-     display: block;
-     width: 75%;
+  
+.portfolio_img {
+     display: flex;         /* Usar flexbox para centrar */
+     justify-content: center; /* Centrar horizontalmente */
+ }
+ 
+ .portfolio_img img {      
+     width: 65%;
      height: auto;
      object-fit: contain;
-     margin: 30px;
-
+     margin-top: 40px; /* Margen superior */
  }
-   
+ 
+ /* Media Queries para mayor adaptabilidad */
+ 
+ /* Pantallas pequeñas (hasta 575px) */
  @media (max-width: 575px) {
      .portfolio_img img {
-         max-width: 55%;      
-         height: auto;
-         margin-top: 0; 
-         margin-left: auto; 
-         margin-right: auto;
+         max-width: 100%; /* Ajuste para que ocupe el ancho completo */
+         margin-top: 20px; /* Menor margen superior */
      }
  }
+    
+ /* Pantallas medianas (576px a 768px) */
+ @media (min-width: 576px) and (max-width: 768px) {
+     .portfolio_img img {     
+         max-width: 70%; /* Ajuste del ancho para pantallas medianas */   
+         margin-top: 30px; /* Margen superior */
+     }
+ }
+ 
+ /* Pantallas grandes (769px en adelante) */
+ @media (min-width: 769px) {
+     .portfolio_img img {
+         width: 65%; /* Mantener el tamaño original */
+         margin-top: 40px; /* Margen superior */
+     }
+ }
+ 
  
  .loader_bg {
      position: fixed; 
@@ -644,10 +664,6 @@ ul.sign li a i {
 
 /** end banner section **/
 
-.titlepage {
-     text-align: left;
-     padding-bottom: 60px;
-}
 
 .titlepage h2 {
      font-size: 36px;
@@ -855,28 +871,24 @@ ul.sign li a i {
      border-right: #f2db18 solid 1px;
      border-right-width: 1px;
      border-width: 90px;
-}
+}  
 
 
-/** end service section **/
+/** end service section **/  
 
 
 /** portfolio section **/
 
-.portfolio {
-     padding-top: 90px;
-}
 
 .portfolio .titlepage {
-     text-align: left; 
+     text-align: left;   
 }
 
 .portfolio .titlepage h2 {   
      position: relative;
-     font-size: 38px;
+     font-size: 38px;  
      font-weight: 700;
      text-align: center;
-     margin: 10px 0 20px;
      padding: 10px;
      color: #a2ef02;
      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -906,13 +918,7 @@ ul.sign li a i {
      line-height: 28px;
      font-weight: 600;
 }
-
-.portfolio .titlepage p {
-     color: #434343;
-     font-size: 17px;
-     line-height: 28px;
-     padding-top: 15px;
-}
+  
 
 .portfolio .portfolio_Carousel .carousel-caption {
      position: inherit;
@@ -1664,6 +1670,8 @@ ul.img_icon li {
  .portfolio_img {
      position: relative;
      overflow: hidden;
+     margin-top: 40px;
+     margin-bottom: 40px;
  }
      
 
@@ -1706,8 +1714,8 @@ ul.img_icon li {
      margin-bottom: 20px;  
  }
  
- .channel-card:hover {
-     transform: translateY(-5px); 
+ .channel-card:hover { 
+     transform: translateY(-10px); 
  }
    
  .channel-card img {
@@ -1844,7 +1852,9 @@ ul.img_icon li {
      .portfolio_img img {
          max-width: 100%; /* Hace que la imagen sea responsiva */
          height: auto; /* Mantiene la proporción de la imagen */
-     }
+         margin-top: 40px; 
+         margin-bottom: 40px;   
+     }    
  }
  
 /* Ajustes para pantallas pequeñas */
@@ -1949,49 +1959,68 @@ ul.img_icon li {
               max-width: 120px; /* Tamaño del logo en pantallas grandes */
           } 
       }  
-      
+        
       .portfolio_img:hover img {
-          transform: translateY(-5px); /* Levanta la imagen al hacer hover */
-          margin-top: 20px;
+          transform: translateY(-15px); /* Levanta la imagen al hacer hover */
+          
       }
 
-      .carousel-inner .ps{
-
-          border-radius: 30px;
-     }
-     .portfolio_imgg img { 
+      .portfolio_imgg {
+          position: relative; 
+          overflow: hidden;
+          width: 100%; /* Asegura que las imágenes ocupen el ancho completo */
+          margin-top: 40px;
+          margin-bottom: 40px;
+          transition: transform 0.3s; /* Suaviza el efecto de zoom */
+      }
+      
+      .portfolio_imgg img { 
           display: block;
           width: 75%;
           height: auto;
           object-fit: contain;
-          margin: 30px;
-          border-radius: 20px; /* Agregado border-radius */
+          margin: auto;  
+          border-radius: 20px; /* Border-radius aplicado */
+          border: #1a75cf solid 3px;
       }
       
-      @media (max-width: 575px) {
-          .portfolio_imgg img {
-              max-width: 55%;      
-              height: auto;
-              margin-top: 0;   
-              margin-left: auto;   
-              margin-right: auto;
-              border-radius: 20px; /* Agregado border-radius en el media query */
-          }
-      } 
-      
-      .portfolio_imgg {
-          margin-bottom: 30px;
-          position: relative; 
-          overflow: hidden;
-          width: 100%; /* Asegura que las imágenes ocupen el ancho completo */
-      }
-      
-      .portfolio_imgg:hover {
+      .portfolio_imgg:hover {  
           transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
       }
       
-      .portfolio_imgg img {
-          max-width: 100%; /* Hace que la imagen sea responsiva */
-          height: auto; /* Mantiene la proporción de la imagen */
+      /* Media Queries para mayor adaptabilidad */
+      
+      /* Pantallas pequeñas (hasta 576px) */
+      @media (max-width: 576px) {
+          .portfolio_imgg img {
+              max-width: 100%; /* Las imágenes ocupan el 100% del ancho */
+              border-radius: 10px; /* Reducción del border-radius si es necesario */
+          }
+          .portfolio_imgg {
+              margin-top: 20px; /* Menor margen superior */
+              margin-bottom: 20px; /* Menor margen inferior */
+          }
+      }
+      
+      /* Pantallas medianas (577px a 768px) */
+      @media (min-width: 577px) and (max-width: 768px) {
+          .portfolio_imgg img {
+              max-width: 90%; /* Espacio alrededor de las imágenes */
+          }
+          .portfolio_imgg {
+              margin-top: 30px; /* Ajuste del margen */
+              margin-bottom: 30px; /* Ajuste del margen */
+          }
+      }
+      
+      /* Pantallas grandes (769px en adelante) */
+      @media (min-width: 769px) {
+          .portfolio_imgg img {
+              max-width: 75%; /* Mantener el tamaño original */
+          }
+          .portfolio_imgg {
+              margin-top: 40px; /* Margen original */
+              margin-bottom: 40px; /* Margen original */
+          }
       }
       
