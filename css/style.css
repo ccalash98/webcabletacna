@@ -2024,3 +2024,169 @@ ul.img_icon li {
           }
       }
       
+      
+      .payment-methods {
+          text-align: center; /* Centrar el contenido */
+          margin: 20px; /* Espacio alrededor del contenedor */
+      }
+      
+      .payment-image {
+          max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */ 
+          height: auto; /* Mantiene la proporción de la imagen */
+          margin-top: 10px; /* Espacio superior para la imagen */  
+      }
+      
+      
+      /* Estilos para pantallas pequeñas */
+      @media (max-width: 600px) {
+          .payment-methods h2 {
+              font-size: 1.5em; /* Tamaño de fuente más pequeño en móviles */
+          }
+      }
+      
+      /* Estilos para pantallas medianas */
+      @media (min-width: 601px) and (max-width: 900px) {
+          .payment-methods h2 {
+              font-size: 2em; /* Tamaño de fuente moderado para tabletas */
+          }
+      }
+      
+      /* Estilos para pantallas grandes */
+      @media (min-width: 901px) {
+          .payment-methods h2 {
+              font-size: 2.5em; /* Tamaño de fuente más grande para escritorio */
+          }
+      }
+      
+
+.support-panel {
+    position: fixed; /* Mantiene el panel fijo en la pantalla */
+    right: 20px; /* Espacio desde el lado derecho */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajuste para centrar completamente */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+.support-icon {
+    display: block; /* Asegura que cada ícono ocupe su propia línea */
+    margin-bottom: 15px; /* Espacio entre los íconos */
+}
+
+.support-icon img {
+    width: 70px; /* Aumentar el tamaño de los íconos */
+    height: auto; /* Mantiene la proporción de la imagen */
+    transition: transform 0.3s; /* Efecto de transición */
+}
+
+.support-icon:hover img {
+    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 600px) {
+    .support-panel {
+        right: 10px; /* Menor espacio en móviles */
+    }
+    .support-icon img {
+        width: 60px; /* Tamaño más grande de los íconos en móviles */
+    }
+}
+
+/* Estilos para pantallas medianas */
+@media (min-width: 601px) and (max-width: 900px) {
+    .support-panel {
+        right: 15px; /* Espacio ajustado en tabletas */
+    }
+    .support-icon img {
+        width: 65px; /* Tamaño moderado de los íconos en tabletas */
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 901px) {
+    .support-panel {
+        right: 20px; /* Espacio normal en escritorio */
+    }
+    .support-icon img {
+        width: 70px; /* Tamaño normal de los íconos */
+    }
+}
+
+
+
+.support-panel {
+     position: fixed; /* Mantiene el panel fijo en la pantalla */
+     right: 20px; /* Espacio desde el lado derecho */
+     top: 50%; /* Centra verticalmente */
+     transform: translateY(-50%); /* Ajuste para centrar completamente */
+     z-index: 1000; /* Asegura que esté encima de otros elementos */
+ }
+ 
+ .support-icon {
+     display: block; /* Asegura que cada enlace ocupe su propia línea */
+     margin-bottom: 15px; /* Espacio entre las imágenes */
+ }
+ 
+ .support-image {
+     width: 1200px; /* Aumentar el tamaño de las imágenes a 1200px */
+     height: auto; /* Mantiene la proporción de la imagen */
+     transition: transform 0.3s; /* Efecto de transición */
+ }
+ 
+ .support-icon:hover .support-image {
+     transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+ }
+ 
+ .support-panel {
+     position: fixed; /* Mantiene el panel fijo en la pantalla */
+     right: 20px; /* Espacio desde el lado derecho */
+     top: 50%; /* Centra verticalmente */
+     transform: translateY(-50%); /* Ajuste para centrar completamente */
+     z-index: 1000; /* Asegura que esté encima de otros elementos */
+ }
+ 
+ .support-icon {
+     display: block; /* Asegura que cada enlace ocupe su propia línea */
+     margin-bottom: 15px; /* Espacio entre las imágenes */
+ }
+ 
+ .support-icon img {
+     width: 1200px; /* Tamaño por defecto de las imágenes */
+     height: auto; /* Mantiene la proporción de la imagen */
+     transition: transform 0.3s; /* Efecto de transición */
+ }
+ 
+ .support-icon:hover img {
+     transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+ }
+ 
+ /* Ajustes para pantallas pequeñas */
+ @media (max-width: 600px) {
+     .support-panel {
+         right: 10px; /* Menor espacio en móviles */
+     }
+     .support-icon img {
+         width: 160px; /* Tamaño de las imágenes en móviles */
+     }
+ }
+ 
+ /* Ajustes para pantallas medianas */ 
+ @media (min-width: 601px) and (max-width: 900px) {
+     .support-panel {
+         right: 15px; /* Espacio ajustado en tabletas */
+     }
+     .support-icon img {
+         width: 160px; /* Tamaño moderado de las imágenes en tabletas */
+     }   
+ }
+ 
+ /* Ajustes para pantallas grandes */
+ @media (min-width: 901px) {
+     .support-panel {
+         right: 20px; /* Espacio normal en escritorio */
+     }
+     .support-icon img {
+         width: 160px; /* Tamaño normal de las imágenes */
+     }
+ }
+ 
