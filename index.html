@@ -56,39 +56,39 @@
 <!-- Header --> 
 <!-- Header -->
 <div id="inicio" class="carousel slide" data-ride="carousel">
-<header>
-   <div class="header">
-       <div class="container">
-           <nav class="navbar navbar-expand-md navbar-dark">
-               <a class="navbar-brand" href="#">
-                   <img src="images/logo.png" alt="Logo" class="logo-img" />
-               </a>
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                   <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarNav">
-                   <ul class="navbar-nav ml-auto">
-                       <li class="nav-item active">
-                           <a class="nav-link" href="#inicio">INICIO</a>
-                       </li>
-                       <li class="nav-item">  
-                           <a class="nav-link" href="#planes">PLANES</a>
-                       </li>
-                       <li class="nav-item">
-                           <a class="nav-link" href="#canales">CANALES</a>
-                       </li>
-                       <li class="nav-item">
-                           <a class="nav-link" href="eventos.html">EVENTOS</a>
-                       </li>
-                       <li class="nav-item">
-                           <a class="nav-link" href="trabaja_con_nosotros.html">TRABAJA CON NOSOTROS</a> 
-                       </li>
-                   </ul>
-               </div>
-           </nav>
-       </div>
-   </div>
-</header>
+    <header>
+        <div class="header">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-dark">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.png" alt="Logo" class="logo-img" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#inicio" onclick="hideNavbar()">INICIO</a>
+                            </li>
+                            <li class="nav-item">  
+                                <a class="nav-link" href="#planes" onclick="hideNavbar()">PLANES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#canales" onclick="hideNavbar()">CANALES</a>
+                            </li>       
+                            <li class="nav-item">
+                                <a class="nav-link" href="eventos.html" onclick="hideNavbar()">EVENTOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="trabaja_con_nosotros.html" onclick="hideNavbar()">TRABAJA CON NOSOTROS</a> 
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+     </header>
 </div>
    <!-- end header inner -->
    <!-- end header -->
@@ -549,8 +549,17 @@
            largeImage.style.display = "none"; // Oculta la imagen grande
            this.textContent = "Ver más";
        }
-   });
+   });  
 </script>
+<script>
+    function hideNavbar() {
+        const navbarCollapse = document.getElementById('navbarNav');
+        if (navbarCollapse.classList.contains('show')) {
+            navbarCollapse.classList.remove('show');
+        }
+    }
+    </script>
+    
 </body>
 
 </html>
