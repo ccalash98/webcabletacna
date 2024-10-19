@@ -170,7 +170,7 @@ a,
  }
  
  /* Media Queries para mayor adaptabilidad */
- 
+    
  /* Pantallas pequeñas (hasta 575px) */
  @media (max-width: 575px) {
      .portfolio_img img {
