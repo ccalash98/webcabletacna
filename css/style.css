@@ -2137,11 +2137,11 @@ ul.img_icon li {
      height: auto; /* Mantiene la proporción de la imagen */
      transition: transform 0.3s; /* Efecto de transición */
  }
- 
+   
  .support-icon:hover .support-image {
      transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
  }
- 
+     
  /* Ajustes para pantallas pequeñas */
  @media (max-width: 600px) {
      .support-panel {
@@ -2218,7 +2218,7 @@ ul.img_icon li {
      .option-card img {
          width: 180px; /* Tamaño normal de las imágenes */
      }
- }
+ }  
  
 
   
@@ -2240,9 +2240,8 @@ ul.img_icon li {
      height: 100%;
      background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
  }
- 
+   
  .modal-content {  
-     max-width: 90%;
      max-height: 90%;
      object-fit: contain; /* Mantiene la proporción de la imagen */
      border-radius: 8px; /* Opcional: añade esquinas redondeadas */
