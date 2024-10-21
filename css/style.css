@@ -1958,13 +1958,8 @@ ul.img_icon li {
           .logo-img {
               max-width: 120px; /* Tamaño del logo en pantallas grandes */
           } 
-      }  
+      }    
         
-      .portfolio_img:hover img {
-          transform: translateY(-15px); /* Levanta la imagen al hacer hover */
-          
-      }
-
       .portfolio_imgg {
           position: relative; 
           overflow: hidden;
@@ -1978,7 +1973,7 @@ ul.img_icon li {
           display: block;
           width: 75%;
           height: auto;
-          object-fit: contain;
+          object-fit: contain;  
           margin: auto;  
           border-radius: 20px; /* Border-radius aplicado */
           border: #1a75cf solid 3px;
@@ -1987,6 +1982,11 @@ ul.img_icon li {
       .portfolio_imgg:hover {  
           transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
       }
+
+      .portfolio_img:hover {   
+          transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+      }
+      
       
       /* Media Queries para mayor adaptabilidad */
       
