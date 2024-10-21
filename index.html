@@ -78,8 +78,8 @@
                                 <a class="nav-link" href="#canales" onclick="hideNavbar()">CANALES</a>
                             </li>       
                             <li class="nav-item">
-                                <a class="nav-link" href="eventos.html" onclick="hideNavbar()">EVENTOS</a>
-                            </li>
+                                <a class="nav-link" href="#eventos" onclick="hideNavbar()">EVENTOS</a>
+                            </li>  
                             <li class="nav-item">
                                 <a class="nav-link" href="trabaja_con_nosotros.html" onclick="hideNavbar()">TRABAJA CON NOSOTROS</a> 
                             </li>
@@ -163,7 +163,7 @@
                             <div class="row">
                                 <div class="col-md-6 col-sm-6">
                                     <div class="portfolio_img">
-                                        <img src="images/internet.png" alt="#" />
+                                        <img src="images/internet.png" alt="#"  />
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6">
@@ -283,16 +283,31 @@
      </div>  
   </div> 
 </div>
-</div>
-  
-  
-   <!-- team  section -->
- <!-- portfolio -->
+</div>  
+     
 
-   <div class="portfolio">
+<div class="support-panel" id="support-panel">  
+    <a href="tel:052290290" class="support-icon" title="Llamar Soporte">
+        <img src="images/contactenos cbl.png" alt="Llamar Soporte" class="support-image">
+    </a>
+    <a href="tel:052290290" class="support-icon" title="Email Soporte">  
+        <img src="images/contactenos cbl.png" alt="Llamar Soporte" class="support-image">
+    </a>    
+    <a href="tel:052290290" class="support-icon" title="WhatsApp Soporte">   
+        <img src="images/contactenos cbl.png" alt="Llamar Soporte" class="support-image">
+    </a>  
+</div>       
+         
+   <!-- team  section -->
+ <!-- portfolio --> 
+
+   <div class="portfolio">   
+    <br>
+    <br>
+    <div id="eventos" class="carousel slide" data-ride="carousel">
       <div class="container">
           <div class="row"> 
-              <div class="col-md-12 ">   
+              <div class="col-md-12 ">     
                   <div class="titlepage"> 
                     <br>  
                     <br>
@@ -358,11 +373,20 @@
                   <i class="fa fa-chevron-right" aria-hidden="true"></i>   
               </a>        
             </div>
-        </div> 
+        </div>    
    </div>
+</div>
+ 
 
-   
-
+<div class="payment-methods">
+    <br>          
+    <br>
+    <h2 ><strong class="verde">METODOS</strong><strong class="blue">DE PAGO</strong></h2>
+    <BR></BR>
+    <img src="images/PAGOS.png" alt="Métodos de Pago" class="payment-image">
+</div>
+<br>
+<br>
    <!-- end contact  section -->
    <div class="blu">
       <div class="container pg mt-5">
@@ -445,7 +469,7 @@
                      <li>🌐 DUOS: Internet en alta velocidad + paquete Full TV.</li>
                      <li>📞 Más información de paquetes comerciales vigentes al (052) 290 290.</li>
                   </ul>
-               </div>
+               </div>  
             </div>
          </div>
       </div>
@@ -496,9 +520,6 @@
                </div>
             </div>
          </footer>
-
-   </div>
-   </footer> 
    <!-- end footer -->
    <!-- Javascript files-->
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -527,7 +548,7 @@
             interval: 3000 // Cambiar de imagen cada 3 segundos
          });
       });   
-   </script>
+   </script> 
 
   <script>
    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -536,7 +557,7 @@
 
            document.querySelector(this.getAttribute('href')).scrollIntoView({  
                behavior: 'smooth'
-           });
+           });  
        });
    });
 </script>
