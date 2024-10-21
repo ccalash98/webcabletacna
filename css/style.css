@@ -1706,17 +1706,19 @@ ul.img_icon li {
  }
 
  .channel-card {
-     position: relative; 
+     position: relative;   
      overflow: hidden;
      border: 1px solid #1a75cf; 
-     border-radius: 8px; 
+     border-radius: 8px;   
      transition: transform 0.3s, box-shadow 0.3s; 
      margin-bottom: 20px;  
  }
  
  .channel-card:hover { 
-     transform: translateY(-10px); 
+     transform: scale(1.05); /* Efecto de zoom al pasar el ratón */ 
  }
+
+  
    
  .channel-card img {
      padding: 40px 0; 
@@ -1973,7 +1975,7 @@ ul.img_icon li {
           display: block;
           width: 75%;
           height: auto;
-          object-fit: contain;  
+          object-fit: contain;
           margin: auto;  
           border-radius: 20px; /* Border-radius aplicado */
           border: #1a75cf solid 3px;
