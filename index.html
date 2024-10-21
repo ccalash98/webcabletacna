@@ -376,8 +376,9 @@
         </div>    
    </div>
 </div>
+
 <div class="payment-options">
-    <br>
+    <br>  
     <br>
     <h2><strong class="yellow">MÉTODOS</strong><strong class="blue">DE PAGO</strong></h2>
     <br>
@@ -397,14 +398,17 @@
                     </a>
                 </div>  
             </div>
-        </div>
+        </div>   
     </div>  
 </div>
+  
+<div id="imageModal" class="modal" style="display: none;"> 
+    <div class="modal-background" onclick="closeImage()">
+<span class="close" onclick="closeImage()"></span>
+        <img class="modal-content" id="modalImage" alt="Payment Method Image">
+    </div>
+</div> 
 
-<div id="imageModal" class="modal" style="display: none;">
-    <span class="close" onclick="closeImage()">&times;</span>
-    <img class="modal-content" id="modalImage" alt="Payment Method Image">
-</div>
 
 
 <br>
@@ -608,27 +612,18 @@
     </script>
 
  
+  
 <script>
-    function showImage(imageSrc) {
-        const modal = document.getElementById("imageModal");
-        const modalImage = document.getElementById("modalImage");
-        modalImage.src = imageSrc; // Update the image source
-        modal.style.display = "flex"; // Show the modal and center content
+    function showImage(src) {
+        document.getElementById('modalImage').src = src;
+        document.getElementById('imageModal').style.display = 'block';
     }
     
     function closeImage() {
-        const modal = document.getElementById("imageModal");
-        modal.style.display = "none"; // Hide the modal
+        document.getElementById('imageModal').style.display = 'none';
     }
-      
-    // Close the modal if the user clicks outside of the image
-    window.onclick = function(event) {
-        const modal = document.getElementById("imageModal");
-        if (event.target === modal) {
-            closeImage();
-        }
-    };
     </script>
+    
       
     
 </body>
