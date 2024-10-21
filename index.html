@@ -376,15 +376,37 @@
         </div>    
    </div>
 </div>
- 
-
-<div class="payment-methods">
-    <br>          
+<div class="payment-options">
     <br>
-    <h2 ><strong class="verde">METODOS</strong><strong class="blue">DE PAGO</strong></h2>
-    <BR></BR>
-    <img src="images/PAGOS.png" alt="Métodos de Pago" class="payment-image">
+    <br>
+    <h2><strong class="yellow">MÉTODOS</strong><strong class="blue">DE PAGO</strong></h2>
+    <br>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-2 col-6 mb-3">
+                <div class="option-card">
+                    <a href="#" onclick="showImage('images/yape.jpg'); return false;" title="Ver Canal Yape">
+                        <img src="images/yape.svg" class="img-fluid rounded" alt="Canal Yape">
+                    </a>
+                </div>
+            </div>  
+            <div class="col-md-2 col-6 mb-3">
+                <div class="option-card">
+                    <a href="#" onclick="showImage('images/bcp.jpg'); return false;" title="Ver Canal BCP">
+                        <img src="images/bcp.svg" class="img-fluid rounded" alt="Canal BCP">
+                    </a>
+                </div>  
+            </div>
+        </div>
+    </div>  
 </div>
+
+<div id="imageModal" class="modal" style="display: none;">
+    <span class="close" onclick="closeImage()">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Payment Method Image">
+</div>
+
+
 <br>
 <br>
    <!-- end contact  section -->
@@ -443,10 +465,10 @@
                      <li>🏢 Realiza tus pagos por Oficina.</li>
                      <li>📞 Solicita información a Atención al Cliente: (052) 290 290.</li>
                   </ul>
-               </div>
+               </div>  
             </div>
             <div class="accordion-item">
-               <div class="accordion-header" onclick="toggleAccordion(this)">
+               <div class="accordion-header" onclick="toggleAccordion(this)"> 
                   <h5 class="accordion-button">¿Cuáles son los beneficios de Cable Tacna?</h5>
                </div>
                <div class="accordion-content">
@@ -582,8 +604,32 @@
         if (navbarCollapse.classList.contains('show')) {
             navbarCollapse.classList.remove('show');
         }
-    }
+    } 
     </script>
+
+ 
+<script>
+    function showImage(imageSrc) {
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        modalImage.src = imageSrc; // Update the image source
+        modal.style.display = "flex"; // Show the modal and center content
+    }
+    
+    function closeImage() {
+        const modal = document.getElementById("imageModal");
+        modal.style.display = "none"; // Hide the modal
+    }
+      
+    // Close the modal if the user clicks outside of the image
+    window.onclick = function(event) {
+        const modal = document.getElementById("imageModal");
+        if (event.target === modal) {
+            closeImage();
+        }
+    };
+    </script>
+      
     
 </body>
 
