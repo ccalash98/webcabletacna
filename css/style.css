@@ -1703,29 +1703,32 @@ ul.img_icon li {
      width: 100%;
      height: 100%;
      object-fit: cover; 
- }
-
+ }  
+ 
  .channel-card {
      position: relative;   
      overflow: hidden;
-     border: 1px solid #1a75cf; 
+     border: 1px solid #ffffff; 
      border-radius: 8px;   
      transition: transform 0.3s, box-shadow 0.3s; 
      margin-bottom: 20px;  
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
  }
  
  .channel-card:hover { 
      transform: scale(1.05); /* Efecto de zoom al pasar el ratón */ 
  }
-
   
    
- .channel-card img {
-     padding: 40px 0; 
+     
+ .channel-card img { 
      border-bottom: 1px solid #ddd; 
      transition: opacity 0.3s; 
      display: block;
+     margin: auto;
+
  }
+
  
  .channel-card:hover img {
      opacity: 0.9; 
@@ -1735,13 +1738,14 @@ ul.img_icon li {
      text-align: center;  
      padding: 10px; 
      font-weight: bold;
-     background-color: #f8f9fa; 
+     background-color: #f8f9fa;   
      color: #333; 
      transition: color 0.3s; 
  }
  
  .channel-card:hover .channel-name {
-     color: #007bff; 
+     color: #000000;
+     
  }
  
    
