@@ -1790,6 +1790,11 @@ ul.img_icon li {
  }
      
  /* Estilos para el logo */
+.logoterms-img {
+     width: 1000px;
+     height: auto; /* Mantiene las proporciones */
+   }
+   
 /* Estilos para el logo */
 .logo-img {    
      max-width: 100%;  
