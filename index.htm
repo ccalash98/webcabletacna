@@ -296,14 +296,35 @@
     </div>  
     <div class="support-panel" id="support-panel">  
         <a href="tel:052290290" class="support-icon" title="Llamar Soporte">
-            <img src="images/contactenos cbl.png" alt="Llamar Soporte" class="support-image">
+            <img src="images/contactenos.png" alt="Llamar Soporte" class="support-image">
         </a>
         <a href="tel:052290290" class="support-icon" title="Email Soporte">  
-            <img src="images/contactenos cbl.png" alt="Llamar Soporte" class="support-image">
+            <img src="images/contactenos.png" alt="Llamar Soporte" class="support-image">
         </a>    
         <a href="tel:052290290" class="support-icon" title="WhatsApp Soporte">   
-            <img src="images/contactenos cbl.png" alt="Llamar Soporte" class="support-image">
+            <img src="images/contactenos.png" alt="Llamar Soporte" class="support-image">
         </a>  
+    </div>
+    <button id="chatButton" aria-label="Abrir chat">💬</button>
+  <!-- Ventana emergente del chat -->
+    <div id="chatBox" style="display: none;">
+        <div id="chatHeader">
+            <span>Asistente Virtual</span>
+            <button id="closeChat">✖</button>
+        </div>
+        <div id="chatMessages">
+            <!-- Mensajes del chat -->
+            <div class="message bot">
+                Bienvenido, selecciona una opción:
+                <br>1. Consultar mi pago
+                <br>2. Hablar con soporte
+                <br>3. Ver servicios disponibles
+            </div>
+        </div>
+        <div id="chatInputContainer">
+            <input type="text" id="chatInput" placeholder="Escribe aquí..." />
+            <button id="sendButton">Enviar</button>
+        </div>
     </div>
  <!-- portfolio --> 
 <div class="portfolio">   
@@ -554,6 +575,8 @@
    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
    <script src="js/custom.js"></script>
    <script src="js/whatsapp.var.js"></script>
+   <script src="js/asistente.js"></script>
+
 
    <script>
         function toggleAccordion(element) {
