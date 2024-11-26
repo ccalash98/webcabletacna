@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
    <!-- basic -->
@@ -36,8 +36,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-   
-      media="screen">
+   <link rel="stylesheet" href="css/styles.css?v=1.0">
 </head>
 <!-- body -->
 <body class="main-layout">  
@@ -295,27 +294,27 @@
         </div> 
     </div>
     
-    <button id="chatButton" aria-label="Abrir chat">💬</button>
-    <!-- Ventana emergente del chat -->
-    <div id="chatBox" style="display: none;">
-        <div id="chatHeader">
-            <span>Asistente Virtual</span>
-            <button id="closeChat">✖</button>
-        </div>
-        <div id="chatMessages">
-            <!-- Mensajes del chat -->
-            <div class="message bot">
-                Bienvenido, selecciona una opción:
-                <br>1. Consultar mi pago
-                <br>2. Hablar con soporte
-                <br>3. Ver servicios disponibles
+        <button id="chatButton" aria-label="Abrir chat">💬</button>
+        <!-- Ventana emergente del chat -->
+        <div id="chatBox" style="display: none;">
+            <div id="chatHeader">
+                <span>Asistente Virtual</span>
+                <button id="closeChat">✖</button>
             </div>
-        </div>
-        <div id="chatInputContainer">
-            <input type="text" id="chatInput" placeholder="Escribe aquí..." />
-            <button id="sendButton">Enviar</button>
-        </div>
-    </div>  
+            <div id="chatMessages">
+                <!-- Mensajes del chat -->
+                <div class="message bot">
+                    Bienvenido, selecciona una opción:
+                    <br>1. Consultar mi pago
+                    <br>2. Hablar con soporte
+                    <br>3. Ver servicios disponibles
+                </div>
+            </div>
+            <div id="chatInputContainer">
+                <input type="text" id="chatInput" placeholder="Escribe aquí..." />
+                <button id="sendButton">Enviar</button>
+            </div>
+        </div>  
     <div class="support-panel" id="support-panel">  
         <a href="tel:052290290" class="support-icon" title="Llamar Soporte">
             <img src="images/contactenos.png" alt="Llamar Soporte" class="support-image">
