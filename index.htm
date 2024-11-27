@@ -533,11 +533,11 @@
                         </a>
                     </div>
                     <h2 class="footer-rights">© Cable Tacna 2024 - Todos los derechos reservados.</h2>
-                    <h2 class="footer-rights">Powered by cristtofher ccalash</h2>
+                    <h2 class="footer-rights">Powered by Cristtofher Ccalash</h2>
                 </div>
             </div>
         </footer>
-        <!-- Botón de chat reemplazado por una imagen -->
+    <!-- Botón de chat reemplazado por una imagen -->
     <img id="chatButton" src="images/FIB.png" alt="Abrir chat" style="cursor: pointer;" class="support-icon">
 
     <!-- Ventana emergente del chat -->
@@ -550,7 +550,7 @@
                 <span class="status-dot"></span> En línea
             </div>
             <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <button id="minimizeChat">-</button> <!-- Nuevo botón para minimizar -->
+            <button id="minimizeChat"><strong>---</strong></button> <!-- Nuevo botón para minimizar -->
             <span>&nbsp;&nbsp;</span>
             <button id="closeChat">✖</button>
             <span>&nbsp;&nbsp;</span>
@@ -558,10 +558,14 @@
         <div id="chatMessages">
             <!-- Mensajes iniciales del chat -->
             <div class="message bot">
-                Bienvenido, selecciona una opción:
-                <br>1. Consultar mi pago
-                <br>2. Hablar con soporte
-                <br>3. Ver servicios disponibles
+                Digita el nro que deseas consultar 😊
+                <br>
+                <br>1. Consulta de pago 🪙
+                <br>2. Forma de Pago🪙
+                <br>3. Horarios y Ubicaciones 🏠
+                <br>4. Contáctate con un asesor 🙋‍♂️
+                <br>5. Soporte Técnico🧑‍🔧
+                <br>6. Lista de Canales CABLE TACNA📺
             </div>
         </div>
         <div id="chatInputContainer">
@@ -592,72 +596,7 @@
    <script src="js/custom.js"></script>
    <script src="js/whatsapp.var.js"></script>
    <script src="js/asistente.js"></script>
-
-
-   <script>
-        function toggleAccordion(element) {
-            const content = element.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                // Cerrar otros elementos
-                const allContents = document.querySelectorAll('.accordion-content');
-                allContents.forEach(item => item.style.display = "none");
-                content.style.display = "block";
-            }
-        }
-
-        $(document).ready(function () {  
-            $('.carousel').carousel({
-                interval: 3000 // Cambiar de imagen cada 3 segundos
-            });
-        });   
-    </script> 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({  
-                    behavior: 'smooth'
-                });  
-            });
-        });
-    </script>
-    <script>
-        document.getElementById('loadMore').addEventListener('click', function() {
-            const moreChannels = document.getElementById('more-channels');
-            const largeImage = document.getElementById('large-image');
-            if (moreChannels.style.display === "none") {
-                moreChannels.style.display = "block"; // Muestra los canales ocultos
-                largeImage.style.display = "block"; // Muestra la imagen grande    
-                this.textContent = "Ver menos";
-            } else {
-                moreChannels.style.display = "none"; // Oculta los canales ocultos
-                largeImage.style.display = "none"; // Oculta la imagen grande
-                this.textContent = "Ver más";
-            }
-        });      
-    </script>
-    <script>
-        function hideNavbar() {
-            const navbarCollapse = document.getElementById('navbarNav');
-            if (navbarCollapse.classList.contains('show')) {
-                navbarCollapse.classList.remove('show');
-            }
-        } 
-    </script>
-    <script>
-        function showImage(src) {
-            document.getElementById('modalImage').src = src;
-            document.getElementById('imageModal').style.display = 'block';
-        }
-        
-        function closeImage() {
-            document.getElementById('imageModal').style.display = 'none';
-        }
-    </script>
-    
+   <script src="js/scripts.js"></script>
 </body>
 
 </html>

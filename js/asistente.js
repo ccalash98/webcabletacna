@@ -21,24 +21,39 @@ chatButton.addEventListener("click", () => {
 minimizeChat.addEventListener("click", () => {
   chatBox.style.display = "none";   // Oculta el chat
   chatButton.style.display = "block"; // Muestra la imagen
+  // No se borra la conversación ni se cambia el estado actual
 });
 
 // Cerrar el chat y borrar la conversación
 closeChat.addEventListener("click", () => {
   chatBox.style.display = "none";   // Oculta el chat
   chatButton.style.display = "block"; // Muestra la imagen
-  // Puedes agregar lógica adicional si necesitas limpiar mensajes
+  chatMessages.innerHTML = ""; // Borra todos los mensajes del contenedor
+  currentMenu = "main"; // Restablece el menú principal
+  navigationStack.length = 0; // Limpia la pila de navegación
 });
 
-// Enviar mensaje al presionar "Enter"
-chatInput.addEventListener("keypress", (event) => {
-  if (event.key === "Enter") {
-    sendMessage();
+// Mostrar el chat y cargar el estado adecuado
+chatButton.addEventListener("click", () => {
+  chatBox.style.display = "flex"; // Muestra el chat
+  chatButton.style.display = "none"; // Oculta la imagen
+
+  if (chatMessages.innerHTML.trim() === "") {
+    // Si no hay mensajes previos, mostrar el menú inicial
+    showMainMenu();
   }
 });
 
+
 // Enviar mensaje al hacer clic en "Enviar"
 sendButton.addEventListener("click", sendMessage);
+// Enviar mensaje al presionar "Enter"
+chatInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault(); // Evita el comportamiento por defecto (como saltos de línea)
+    sendMessage();
+  }
+});
 
 // Función para enviar mensaje
 function sendMessage() {
@@ -85,10 +100,15 @@ function handleResponse(input) {
         break;
       case "2":
         navigationStack.push("main"); // Guardar el menú actual en la pila
-        currentMenu = "soporte";
-        showSupportMenu();
+        currentMenu = "Forma de Pago";
+        showFormaPago();
         break;
       case "3":
+          navigationStack.push("main"); // Guardar el menú actual en la pila
+          currentMenu = "soporte";
+          showSupportMenu();
+          break;
+      case "4":
         addMessage("bot", "Aquí tienes nuestros servicios:\n- Desarrollo web\n- Soporte técnico\n0 - Retroceder");
         break;
       default:
@@ -129,10 +149,16 @@ function handleResponse(input) {
 function showMainMenu() {
   addMessage(
     "bot",
-    "Bienvenido al chat, selecciona una opción:\n1 - Consultar mi pago\n2 - Soporte técnico\n3 - Conocer servicios"
+    "Bienvenido al chat, selecciona una opción:\n1 - Consultar mi pago\n2 - Forma de Pago\n3 - Soporte técnico\n4 - Conocer servicios"
   );
 }
-
+// Mostrar el submenú de Forma de pagos
+function showFormaPago() {
+  addMessage(
+    "bot",
+    "Estás en el menú de Forma de Pagos. Selecciona una opción:\n1 - Fecha de Pagos\n2 - Codigo y Formas de Pago\n3 - Volver al menú principal\n0 - Retroceder"
+  );
+}
 // Mostrar el submenú de soporte técnico
 function showSupportMenu() {
   addMessage(
