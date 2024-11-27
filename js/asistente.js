@@ -68,7 +68,7 @@ function sendMessage() {
 function addMessage(sender, text) {
   const message = document.createElement("div");
   message.classList.add("message", sender);
-  message.innerText = text;
+  message.innerHTML = text;
   chatMessages.appendChild(message);
 
   // Hacer scroll al final
@@ -96,51 +96,119 @@ function handleResponse(input) {
       case "1":
         navigationStack.push("main"); // Guardar el menú actual en la pila
         currentMenu = "consulta";
-        addMessage("bot", "Por favor, ingresa tu cédula para consultar tu pago.\n0 - Retroceder");
+        addMessage("bot", "Por favor, ingresa tu cédula para consultar tu pago.<br>\n0. Retroceder");
         break;
       case "2":
         navigationStack.push("main"); // Guardar el menú actual en la pila
-        currentMenu = "Forma de Pago";
+        currentMenu = "pagos";
         showFormaPago();
         break;
       case "3":
           navigationStack.push("main"); // Guardar el menú actual en la pila
+          currentMenu = "ubicacion";
+          showUbicacion();
+        break;
+      case "4":
+          navigationStack.push("main"); // Guardar el menú actual en la pila
+          currentMenu = "asesor";
+          showAsesor();
+        break;
+      case "5":
+          navigationStack.push("main"); // Guardar el menú actual en la pila
           currentMenu = "soporte";
           showSupportMenu();
-          break;
-      case "4":
-        addMessage("bot", "Aquí tienes nuestros servicios:\n- Desarrollo web\n- Soporte técnico\n0 - Retroceder");
+        break;
+      case "Asesor Humano":
+        addMessage("bot", "Aquí tienes nuestros servicios:<br>\n- Desarrollo web<br>\n- Soporte técnico<br>\n0 - Retroceder");
         break;
       default:
-        addMessage("bot", "Opción no válida. Por favor, selecciona una opción del menú:\n0 - Retroceder");
+        addMessage("bot", "Opción no válida. Por favor, selecciona una opción del menú:<br>\n0 - Retroceder");
     }
   } else if (currentMenu === "consulta") {
     // Validar que el input sea un número (cédula)
     if (!/^\d+$/.test(input)) {
-      addMessage("bot", "Por favor, ingresa un número de cédula válido.\n0 - Retroceder");
+      addMessage("bot", "Por favor, ingresa un número de cédula válido.<br>\n0 - Retroceder");
       return;
     }
-
     // Simular búsqueda de cédula
-    addMessage("bot", `Buscando información para la cédula: ${input}...\n0 - Retroceder`);
+    addMessage("bot", `Buscando información para la cédula: ${input}...<br>\n0 - Retroceder`);
     currentMenu = "main"; // Volver automáticamente al menú principal después de consultar
     showMainMenu();
-  } else if (currentMenu === "soporte") {
-    // Manejar submenú de soporte técnico
+
+  } else if (currentMenu === "pagos") {
+    // Manejar submenú de pagos
     switch (input) {
       case "1":
-        navigationStack.push("soporte"); // Guardar el menú actual en la pila
-        addMessage("bot", "Por favor, describe tu problema técnico.\n0 - Retroceder");
+        navigationStack.push("pagos"); // Guardar el menú actual en la pila
+        addMessage("bot", "Fecha Limite de Pago, dia 30 - 31 de cada mes.<br>\n0. Retroceder");
         break;
       case "2":
-        addMessage("bot", "Para consultas de facturación, contacta a soporte@empresa.com.\n0 - Retroceder");
+        addMessage("bot", "Pago de servicios disponibles en :<br>\n AGENTES BCP CODIGO - 22832<br>\n BANCA MOVIL BCP - APLICATIVO BCP - YAPE<br>\n Solo con tu Nro de DNI<br>\n0. Retroceder");
         break;
       case "3":
         currentMenu = "main"; // Regresar al menú principal
         showMainMenu();
         break;
       default:
-        addMessage("bot", "Opción no válida. Por favor, selecciona una opción del menú:\n0 - Retroceder");
+        addMessage("bot", "Opción no válida. Por favor, selecciona una opción del menú:<br>\n0. Retroceder");
+    }
+  } else if (currentMenu === "ubicacion") {
+    // Manejar submenú de ubicacion
+    switch (input) {
+      case "1":
+        navigationStack.push("ubicacion"); // Guardar el menú actual en la pila
+        addMessage("bot", "Nuestros Horario de Atencion son :<br>\n Lunes a viernes Mañana 8:30 hrs a 13:30 hrs, Tarde 14:00 hrs a 17:00 hrs<br>\n Sabado 8:30hrs a 13:00hrs.<br>\n Asistente Virtual 24 Hrs<br>\n0. Retroceder");
+        break;
+      case "2":
+        addMessage(
+          "bot", 
+          `Haz click en las direcciones para ubicarnos<br>
+           Cono Sur: <br><a href="https://maps.app.goo.gl/j4YTWSjoQZkF5dQ28" target="_blank"><b style="color: blue;">Villa El Salvador MZ. A Lote 01</b></a><br>
+           Ciudad Perdida: <br><a href="https://maps.app.goo.gl/cEgHY19cqtqu4SjL7" target="_blank"><b style="color: blue;">Asoc. Los Angeles H-5</b></a><br>
+           Cercado: <br><a href="https://goo.gl/maps/DwR8yvLzGDJfd5CUA" target="_blank"><b style="color: blue;">Parque Industrial Mz. J Lote 07</b></a><br>
+           0. Retroceder`
+        );
+                break;
+      case "3":
+        currentMenu = "main"; // Regresar al menú principal
+        showMainMenu();
+        break;
+      default:
+        addMessage("bot", "Opción no válida. Por favor, selecciona una opción del menú:<br>\n0. Retroceder");
+    }
+  } else if (currentMenu === "asesor") {
+    // Manejar submenú de asesor
+    switch (input) {
+      case "1":
+        navigationStack.push("asesor"); // Guardar el menú actual en la pila
+        addMessage("bot", "Comunicate Con Nosotros<br>\n0. Retroceder");
+        break;
+      case "2":
+        addMessage("bot", "Comunicate con uno de nuestros asesores<br>\n0. Retroceder");
+        break;
+      case "3":
+        currentMenu = "main"; // Regresar al menú principal
+        showMainMenu();
+        break;
+      default:
+        addMessage("bot", "Opción no válida. Por favor, selecciona una opción del menú:<br>\n0. Retroceder");
+    }
+  } else if (currentMenu === "soporte") {
+    // Manejar submenú de soporte técnico
+    switch (input) {
+      case "1":
+        navigationStack.push("soporte"); // Guardar el menú actual en la pila
+        addMessage("bot", "Por favor, describe tu problema técnico.<br>\n0. Retroceder");
+        break;
+      case "2":
+        addMessage("bot", "Para consultas de facturación, contacta a soporte@empresa.com.<br>\n0. Retroceder");
+        break;
+      case "3":
+        currentMenu = "main"; // Regresar al menú principal
+        showMainMenu();
+        break;
+      default:
+        addMessage("bot", "Opción no válida. Por favor, selecciona una opción del menú:<br>\n0. Retroceder");
     }
   }
 }
@@ -149,21 +217,35 @@ function handleResponse(input) {
 function showMainMenu() {
   addMessage(
     "bot",
-    "Bienvenido al chat, selecciona una opción:\n1 - Consultar mi pago\n2 - Forma de Pago\n3 - Soporte técnico\n4 - Conocer servicios"
+    "Digita el nro que deseas consultar 😊 <br>\n1. Consulta de pago 🪙<br>\n2. Forma de Pago🪙<br>\n3. Horarios - Ubicacion 🏠<br>\n4. Contactate Con un Asesor 🙋‍♂️<br>\n5. Soporte Tecnico 🧑‍🔧"
   );
 }
 // Mostrar el submenú de Forma de pagos
 function showFormaPago() {
   addMessage(
     "bot",
-    "Estás en el menú de Forma de Pagos. Selecciona una opción:\n1 - Fecha de Pagos\n2 - Codigo y Formas de Pago\n3 - Volver al menú principal\n0 - Retroceder"
+    "Estás en el menú de Forma de Pagos. Selecciona una opción:<br>\n1. Fecha de Pagos<br>\n2. Codigo y Formas de Pago<br>\n3. Volver al menú principal<br>\n0. Retroceder"
+  );
+}
+// Mostrar el submenú de ubicaciones
+function showUbicacion() {
+  addMessage(
+    "bot",
+    "Estás en el menú de Informacion. Selecciona una opción:<br>\n1. Horarios<br>\n2. Ubicacion de Oficinas<br>\n3. Volver al menú principal<br>\n0. Retroceder"
+  );
+}
+// Mostrar el submenú de Asesor
+function showAsesor() {
+  addMessage(
+    "bot",
+    "Estás en el menú de Atencion Al Cliente. Selecciona una opción:<br>\n1. Central Telefonica<br>\n2. habla con uno de nuestros Asesores<br>\n3. Volver al menú principal<br>\n0. Retroceder"
   );
 }
 // Mostrar el submenú de soporte técnico
 function showSupportMenu() {
   addMessage(
     "bot",
-    "Estás en el menú de soporte técnico. Selecciona una opción:\n1 - Problemas técnicos\n2 - Consultas sobre facturación\n3 - Volver al menú principal\n0 - Retroceder"
+    "Estás en el menú de soporte técnico. Selecciona una opción:<br>\n1. Problemas técnicos<br>\n2. Consultas sobre facturación <br>\n3. Volver al menú principal<br>\n0. Retroceder"
   );
 }
 
@@ -171,6 +253,12 @@ function showSupportMenu() {
 function showMenu(menu) {
   if (menu === "main") {
     showMainMenu();
+  }  else if (menu === "pagos") {
+    showFormaPago();
+  } else if (menu === "ubicacion") {
+    showUbicacion();
+  } else if (menu === "asesor") {
+    showAsesor();
   } else if (menu === "soporte") {
     showSupportMenu();
   }
