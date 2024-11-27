@@ -143,6 +143,7 @@ function handleResponse(input) {
         addMessage("bot", "Fecha Limite de Pago, dia 30 - 31 de cada mes.<br>\n0. Retroceder");
         break;
       case "2":
+        navigationStack.push("pagos");
         addMessage("bot", "Pago de servicios disponibles en :<br>\n AGENTES BCP CODIGO - 22832<br>\n BANCA MOVIL BCP - APLICATIVO BCP - YAPE<br>\n Solo con tu Nro de DNI<br>\n0. Retroceder");
         break;
       case "3":
@@ -160,6 +161,7 @@ function handleResponse(input) {
         addMessage("bot", "Nuestros Horario de Atencion son :<br>\n Lunes a viernes Mañana 8:30 hrs a 13:30 hrs, Tarde 14:00 hrs a 17:00 hrs<br>\n Sabado 8:30hrs a 13:00hrs.<br>\n Asistente Virtual 24 Hrs<br>\n0. Retroceder");
         break;
       case "2":
+        navigationStack.push("ubicacion"); // Guardar el menú actual en la pila
         addMessage(
           "bot", 
           `Haz click en las direcciones para ubicarnos<br>
@@ -184,6 +186,7 @@ function handleResponse(input) {
         addMessage("bot", "Comunicate Con Nosotros<br>\n0. Retroceder");
         break;
       case "2":
+        navigationStack.push("asesor"); // Guardar el menú actual en la pila
         addMessage("bot", "Comunicate con uno de nuestros asesores<br>\n0. Retroceder");
         break;
       case "3":
@@ -201,6 +204,7 @@ function handleResponse(input) {
         addMessage("bot", "Por favor, describe tu problema técnico.<br>\n0. Retroceder");
         break;
       case "2":
+        navigationStack.push("soporte"); // Guardar el menú actual en la pila
         addMessage("bot", "Para consultas de facturación, contacta a soporte@empresa.com.<br>\n0. Retroceder");
         break;
       case "3":
