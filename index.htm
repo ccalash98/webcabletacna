@@ -295,38 +295,6 @@
         </div> 
     </div>
     
-        <button id="chatButton" aria-label="Abrir chat">💬</button>
-        <!-- Ventana emergente del chat -->
-        <div id="chatBox" style="display: none;">
-            <div id="chatHeader">
-                <span>Asistente Virtual</span>
-                <button id="closeChat">✖</button>
-            </div>
-            <div id="chatMessages">
-                <!-- Mensajes del chat -->
-                <div class="message bot">
-                    Bienvenido, selecciona una opción:
-                    <br>1. Consultar mi pago
-                    <br>2. Hablar con soporte
-                    <br>3. Ver servicios disponibles
-                </div>
-            </div>
-            <div id="chatInputContainer">
-                <input type="text" id="chatInput" placeholder="Escribe aquí..." />
-                <button id="sendButton">Enviar</button>
-            </div>
-        </div>  
-    <div class="support-panel" id="support-panel">  
-        <a href="tel:052290290" class="support-icon" title="Llamar Central">
-            <img src="images/contactenos.png" alt="Llamar Soporte" class="support-image">
-        </a>
-        <a href="tel:900006000" class="support-icon" title="Llamar Ventas">  
-            <img src="images/6000.png" alt="Llamar Soporte" class="support-image">
-        </a>    
-        <a href="tel:969600800" class="support-icon" title="Llamar Ventas">   
-            <img src="images/ventas.png" alt="Llamar Soporte" class="support-image">
-        </a>  
-    </div>
  <!-- portfolio --> 
     <div class="portfolio">   
         <br>
@@ -569,6 +537,50 @@
                 </div>
             </div>
         </footer>
+        <!-- Botón de chat reemplazado por una imagen -->
+    <img id="chatButton" src="images/FIB.png" alt="Abrir chat" style="cursor: pointer;" class="support-icon">
+
+    <!-- Ventana emergente del chat -->
+    <div id="chatBox" style="display: none;">
+        <div id="chatHeader">
+            <img src="images/fibicon.png" alt="Logo Fibrita" id="chatLogo">
+            <span>FIBRITA</span>
+            <span>&nbsp;&nbsp;</span>
+            <div id="status">
+                <span class="status-dot"></span> En línea
+            </div>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <button id="minimizeChat">-</button> <!-- Nuevo botón para minimizar -->
+            <span>&nbsp;&nbsp;</span>
+            <button id="closeChat">✖</button>
+            <span>&nbsp;&nbsp;</span>
+        </div>
+        <div id="chatMessages">
+            <!-- Mensajes iniciales del chat -->
+            <div class="message bot">
+                Bienvenido, selecciona una opción:
+                <br>1. Consultar mi pago
+                <br>2. Hablar con soporte
+                <br>3. Ver servicios disponibles
+            </div>
+        </div>
+        <div id="chatInputContainer">
+            <input type="text" id="chatInput" placeholder="Escribe aquí..." />
+            <button id="sendButton">Enviar</button>
+        </div>
+    </div>
+    <!-- numeros ayuda -->
+    <div class="support-panel" id="support-panel">  
+        <a href="tel:052290290" class="support-icon" title="Llamar Central">
+            <img src="images/contactenos.png" alt="Llamar Soporte" class="support-image">
+        </a>
+        <a href="tel:900006000" class="support-icon" title="Llamar Ventas">  
+            <img src="images/6000.png" alt="Llamar Soporte" class="support-image">
+        </a>    
+        <a href="tel:969600800" class="support-icon" title="Llamar Ventas">   
+            <img src="images/ventas.png" alt="Llamar Soporte" class="support-image">
+        </a>  
+    </div>
     </div>
    <!-- end footer -->
    <!-- Javascript files-->

@@ -5,23 +5,29 @@ const closeChat = document.getElementById("closeChat");
 const chatMessages = document.getElementById("chatMessages");
 const chatInput = document.getElementById("chatInput");
 const sendButton = document.getElementById("sendButton");
+const minimizeChat = document.getElementById("minimizeChat");
 
 // Estado inicial
 let currentMenu = "main"; // Controla en qué menú o etapa está el usuario
 const navigationStack = []; // Pila para guardar historial de navegación
 
-// Mostrar/Ocultar la ventana del chat
+// Mostrar el chat y ocultar el botón de la imagen
 chatButton.addEventListener("click", () => {
-  chatBox.style.display = chatBox.style.display === "none" ? "flex" : "none";
+  chatButton.style.display = "none"; // Oculta la imagen
+  chatBox.style.display = "flex";   // Muestra el chat
+});
+
+// Minimizar el chat y mostrar la imagen
+minimizeChat.addEventListener("click", () => {
+  chatBox.style.display = "none";   // Oculta el chat
+  chatButton.style.display = "block"; // Muestra la imagen
 });
 
 // Cerrar el chat y borrar la conversación
 closeChat.addEventListener("click", () => {
-  chatBox.style.display = "none"; // Ocultar el chat
-  chatMessages.innerHTML = ""; // Borrar toda la conversación
-  currentMenu = "main"; // Restablecer al menú principal
-  navigationStack.length = 0; // Limpiar la pila de navegación
-  showMainMenu(); // Mostrar el menú principal nuevamente
+  chatBox.style.display = "none";   // Oculta el chat
+  chatButton.style.display = "block"; // Muestra la imagen
+  // Puedes agregar lógica adicional si necesitas limpiar mensajes
 });
 
 // Enviar mensaje al presionar "Enter"
@@ -37,11 +43,10 @@ sendButton.addEventListener("click", sendMessage);
 // Función para enviar mensaje
 function sendMessage() {
   const userMessage = chatInput.value.trim();
-  if (userMessage) {
-    addMessage("user", userMessage); // Mostrar el mensaje del usuario
-    chatInput.value = ""; // Limpiar el campo de entrada
-    handleResponse(userMessage); // Manejar la respuesta
-  }
+  if (!userMessage) return; // Evitar mensajes vacíos
+  addMessage("user", userMessage); // Mostrar el mensaje del usuario
+  chatInput.value = ""; // Limpiar el campo de entrada
+  handleResponse(userMessage); // Manejar la respuesta
 }
 
 // Agregar mensaje al chat
@@ -64,7 +69,7 @@ function handleResponse(input) {
       showMenu(currentMenu);
     } else {
       // Si no hay historial, mostrar el menú principal
-      currentMenu = "main";
+      addMessage("bot", "Ya estás en el menú principal.");
       showMainMenu();
     }
     return;
@@ -90,7 +95,13 @@ function handleResponse(input) {
         addMessage("bot", "Opción no válida. Por favor, selecciona una opción del menú:\n0 - Retroceder");
     }
   } else if (currentMenu === "consulta") {
-    // Procesar la cédula (simulado)
+    // Validar que el input sea un número (cédula)
+    if (!/^\d+$/.test(input)) {
+      addMessage("bot", "Por favor, ingresa un número de cédula válido.\n0 - Retroceder");
+      return;
+    }
+
+    // Simular búsqueda de cédula
     addMessage("bot", `Buscando información para la cédula: ${input}...\n0 - Retroceder`);
     currentMenu = "main"; // Volver automáticamente al menú principal después de consultar
     showMainMenu();
