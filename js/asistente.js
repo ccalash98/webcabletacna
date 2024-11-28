@@ -119,6 +119,7 @@ function handleResponse(input) {
           showSupportMenu();
         break;
       case "Asesor Humano":
+        navigationStack.push("main"); // Guardar el menú actual en la pila
         addMessage("bot", "Aquí tienes nuestros servicios:<br>\n- Desarrollo web<br>\n- Soporte técnico<br>\n0 - Retroceder");
         break;
       default:
@@ -132,8 +133,9 @@ function handleResponse(input) {
     }
     // Simular búsqueda de cédula
     addMessage("bot", `Buscando información para la cédula: ${input}...<br>\n0 - Retroceder`);
-    currentMenu = "main"; // Volver automáticamente al menú principal después de consultar
-    showMainMenu();
+    currentMenu = "consulta"; // Volver automáticamente al menú principal después de consultar
+    // showMainMenu();
+    return;
 
   } else if (currentMenu === "pagos") {
     // Manejar submenú de pagos
@@ -265,5 +267,27 @@ function showMenu(menu) {
     showAsesor();
   } else if (menu === "soporte") {
     showSupportMenu();
+  }
+}
+ //aqui realizaremos la funcion de consulta:
+ 
+async function fetchFromExcel(cedula) {
+  try {
+    const response = await fetch("http://localhost:3000/consulta", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ cedula }),
+    });
+
+    const result = await response.json();
+    if (result.success) {
+      const { data } = result;
+      return `Nombre: ${data.Nombre}, Cédula: ${data.Cédula}, Otros datos: ${data.Otros || "N/A"}`;
+    } else {
+      return result.message || "No se encontraron datos.";
+    }
+  } catch (error) {
+    console.error("Error al consultar el servidor:", error);
+    return "Ocurrió un error al realizar la consulta.";
   }
 }
