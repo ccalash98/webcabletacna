@@ -2519,7 +2519,6 @@ body {
      top: 37%;
      left: 50%;
      transform: translate(-50%, 0);
-     abox-shadow: inset 0 0 0 10vmin #0002;
      background-image: linear-gradient(transparent 20%, #0003)
    }
    
