@@ -1553,7 +1553,7 @@ ul.img_icon li {
         display: none;   
         padding: 15px;  
         background-color: #fff;
-        
+        text-align: justify;        
     }   
 
     h2.frec {
@@ -1692,7 +1692,18 @@ ul.img_icon li {
  border-radius: 8px; 
  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
 }    
+.white{
 
+     color: #fff;
+     text-align: center;    
+     font-size: 38px; 
+     font-weight: bold; 
+     text-transform: uppercase; 
+     margin: 20px 0; 
+     padding: 10px; 
+     border-radius: 8px; 
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+    }   
 .verde{  
 
      color: #a2ef02; 
