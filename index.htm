@@ -19,10 +19,7 @@
    <!-- Responsive-->
    <link rel="stylesheet" href="css/responsive.css">
 
-
    <link rel="stylesheet" href="css/owl.carousel.min.css">  
-   <!-- fevicon -->  
-   <link rel="icon" href="images/fevicon.png" type="image/gif" />
    <link rel="icon" href="./images/logo_mini.png" sizes="32x32" />
    <!-- Scrollbar Custom CSS -->
    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
@@ -35,19 +32,19 @@
    <!-- Font Awesome -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-   
-      media="screen">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 </head>
 <!-- body -->
 <body class="main-layout">  
-  <!-- Loader -->
+    <!-- Loader -->
     <div class="loader_bg">  
-    <div class="loader">
-        <!-- <img class="loader-img" src="images/loading.gif" alt="Cargando..." /> -->
-    </div>
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <img src="./images/logo_mini.png" alt="Cargando..." />
+        </div>
     </div>
     <!-- End loader -->
+
     <!-- Header -->
     <div id="inicio" class="carousel slide" data-ride="carousel">
         <header>
@@ -56,9 +53,6 @@
                     <nav class="navbar navbar-expand-md navbar-dark">
                         <a class="navbar-brand" href="https://www.cabletacna.com.pe">
                             <img src="images/logo.png" alt="Logo" class="logo-img" />
-                        </a>
-                        <a class="navbar-brand" href="#">
-                            <img src="images/4ye.png" alt="4ye" class="logo-img" />
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -75,7 +69,7 @@
                                     <a class="nav-link" href="#canales" onclick="hideNavbar()">CANALES</a>
                                 </li>       
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#eventos" onclick="hideNavbar()">EVENTOS</a>
+                                    <a class="nav-link" href="#contenido" onclick="hideNavbar()">CONTENIDO</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#pagos" onclick="hideNavbar()">COMO PAGAR</a>
@@ -210,99 +204,100 @@
             </div>
         </div>
     </div>
-    <div id="canales" class="carousel slide" data-ride="carousel">
-        <br>
-        <br>  
-        <br>  
-        <br>     
-        <div class="container mt-4">
-            <h2 class="TV"><strong class="verde">NUESTROS</strong> <strong class="blue">CANALES</strong></h2>
-            <div class="row">
-                <!-- Canales visibles -->
-                <div class="col-md-2 col-6 mb-3">
-                    <div class="channel-card">
-                        <a href="URL_DEL_CANAL_1" target="_blank" title="Ver Cable Tacna TV">
-                            <img src="images/CTTV.png" class="img-fluid rounded" alt="Cable Tacna TV">
-                        </a>
-                        <div class="channel-name">
-                            Cable Tacna TV
+    <div class="blu">
+        <div id="canales" class="carousel slide" data-ride="carousel">
+            <br>
+            <br>  
+            <br>  
+            <br>     
+            <div class="container mt-4">
+                <h2 class="TV"><strong class="verde">NUESTROS</strong> <strong class="blue">CANALES</strong></h2>
+                <div class="row">
+                    <!-- Canales visibles -->
+                    <div class="col-md-2 col-6 mb-3">
+                        <div class="channel-card">
+                            <a href="URL_DEL_CANAL_1" target="_blank" title="Ver Cable Tacna TV">
+                                <img src="images/CTTV.png" class="img-fluid rounded" alt="Cable Tacna TV">
+                            </a>
+                            <div class="channel-name">
+                                Cable Tacna TV
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-2 col-6 mb-3">
-                    <div class="channel-card">
-                        <a href="URL_DEL_CANAL_2" target="_blank" title="Ver CTD">
-                            <img src="images/CTD.png" class="img-fluid rounded" alt="Cable Tacna Deportes">
-                        </a>
-                        <div class="channel-name">
-                            Cable Tacna D
+                    <div class="col-md-2 col-6 mb-3">
+                        <div class="channel-card">
+                            <a href="URL_DEL_CANAL_2" target="_blank" title="Ver CTD">
+                                <img src="images/CTD.png" class="img-fluid rounded" alt="Cable Tacna Deportes">
+                            </a>
+                            <div class="channel-name">
+                                Cable Tacna D
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-2 col-6 mb-3">
-                    <div class="channel-card">
-                        <a href="URL_DEL_CANAL_2" target="_blank" title="Ver Baby First">
-                            <img src="images/baby.png" class="img-fluid rounded" alt="Baby First">
-                        </a>
-                        <div class="channel-name">
-                            Baby First
+                    <div class="col-md-2 col-6 mb-3">
+                        <div class="channel-card">
+                            <a href="URL_DEL_CANAL_2" target="_blank" title="Ver Baby First">
+                                <img src="images/baby.png" class="img-fluid rounded" alt="Baby First">
+                            </a>
+                            <div class="channel-name">
+                                Baby First
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-2 col-6 mb-3">
-                    <div class="channel-card">
-                        <a href="URL_DEL_CANAL_2" target="_blank" title="Ver HBO">
-                            <img src="images/hbo.png" class="img-fluid rounded" alt="HBO">
-                        </a>
-                        <div class="channel-name">
-                            HBO
+                    <div class="col-md-2 col-6 mb-3">
+                        <div class="channel-card">
+                            <a href="URL_DEL_CANAL_2" target="_blank" title="Ver HBO">
+                                <img src="images/hbo.png" class="img-fluid rounded" alt="HBO">
+                            </a>
+                            <div class="channel-name">
+                                HBO
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-2 col-6 mb-3">
-                    <div class="channel-card">
-                        <a href="URL_DEL_CANAL_2" target="_blank" title="Ver Kanal D Drama">
-                            <img src="images/kdrama.png" class="img-fluid rounded" alt="Kanal D Drama">
-                        </a>
-                        <div class="channel-name">
-                            Kanal D Drama
+                    <div class="col-md-2 col-6 mb-3">
+                        <div class="channel-card">
+                            <a href="URL_DEL_CANAL_2" target="_blank" title="Ver Kanal D Drama">
+                                <img src="images/kdrama.png" class="img-fluid rounded" alt="Kanal D Drama">
+                            </a>
+                            <div class="channel-name">
+                                Kanal D Drama
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-2 col-6 mb-3">
-                    <div class="channel-card">
-                        <a href="URL_DEL_CANAL_2" target="_blank" title="Ver ESPN Premiun">
-                            <img src="images/espn.png" class="img-fluid rounded" alt="ESPN Premiun">
-                        </a>
-                        <div class="channel-name">
-                            ESPN Premiun
+                    <div class="col-md-2 col-6 mb-3">
+                        <div class="channel-card">
+                            <a href="URL_DEL_CANAL_2" target="_blank" title="Ver ESPN Premiun">
+                                <img src="images/espn.png" class="img-fluid rounded" alt="ESPN Premiun">
+                            </a>
+                            <div class="channel-name">
+                                ESPN Premiun
+                            </div>
                         </div>
-                    </div>
-                </div>    
-                <!-- ... más canales ... -->
-            </div>
-                <!-- Contenedor para canales ocultos -->
-            <div id="more-channels" class="row" style="display: none; margin-top: 20px;">
-                <div class="col-md-2 col-6 mb-3">
-                    <!-- Agrega más canales ocultos aquí -->
+                    </div>    
+                    <!-- ... más canales ... -->
                 </div>
-            </div>       
-                <!-- Imagen grande que se muestra al hacer clic en "Ver más" -->
-            <div id="large-image" style="display: none; text-align: center; margin-top: 20px;">
-                <img src="images/preview-canales-.png" class="img-fluid" alt="Vista previa de canales">
-            </div>       
-                <!-- Botón "Ver más" -->
-            <div class="text-center mt-4">
-                <button id="loadMore" class="btn btn-Descubre">Ver más</button>
+                    <!-- Contenedor para canales ocultos -->
+                <div id="more-channels" class="row" style="display: none; margin-top: 20px;">
+                    <div class="col-md-2 col-6 mb-3">
+                        <!-- Agrega más canales ocultos aquí -->
+                    </div>
+                </div>       
+                    <!-- Imagen grande que se muestra al hacer clic en "Ver más" -->
+                <div id="large-image" style="display: none; text-align: center; margin-top: 20px;">
+                    <img src="images/preview-canales-.png" class="img-fluid" alt="Vista previa de canales">
+                </div>       
+                    <!-- Botón "Ver más" -->
+                <div class="text-center mt-4">
+                    <button id="loadMore" class="btn btn-Descubre">Ver más</button>
+                </div> 
             </div> 
-        </div> 
+        </div>
+        <br>
+        <br>
     </div>
-    
  <!-- portfolio --> 
-    <div class="portfolio">   
-        <br>
-        <br>
-        <div id="eventos" class="carousel slide" data-ride="carousel">
+    <div class="portfolio">
+        <div id="contenido" class="carousel slide" data-ride="carousel">
             <div class="container">
                 <div class="row"> 
                     <div class="col-md-12 ">     
